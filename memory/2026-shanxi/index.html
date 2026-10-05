@@ -63,6 +63,7 @@ footer a{color:var(--gold)}
 </style>
 </head>
 <body>
+<a id="top"></a>
 <button id="gear" onclick="openSetup()" title="上传口令设置">⚙️</button>
 <div id="setup"><div class="box">
 <h3>⚙️ 上传口令（GitHub Token）</h3>
@@ -73,7 +74,10 @@ footer a{color:var(--gold)}
 <header class="hero" id="top">
 <h1>旅 行 回 忆 录</h1>
 <p>慢慢走，慢慢记——老了翻开，还能听见当时的风。</p>
-<nav><a href="index.html">🏔️ 攻略页</a><a class="on" href="memory.html">📖 晋陕2026</a><a href="xibei.html">📜 大西北2020</a></nav>
+<nav>
+  <a href="https://skyjessia.github.io/Shanxitravelplan/" style="display:inline-block;padding:8px 18px;border-radius:20px;background:#c8a24a;color:#fff;font-size:14px;text-decoration:none;margin:4px">🏔️ 晋陕攻略页</a>
+  <a href="https://skyjessia.github.io/travel-bank/" style="display:inline-block;padding:8px 18px;border-radius:20px;background:rgba(255,255,255,.92);color:#6f5c46;font-size:14px;text-decoration:none;margin:4px">🗺️ 旅行档案</a>
+</nav>
 </header>
 <div class="wrap">
 <div class="trip-card">
@@ -151,11 +155,11 @@ footer a{color:var(--gold)}
 
 
 </div>
-<p style="text-align:center;margin:18px 0 6px;"><a href="#top" style="color:#8b0000;text-decoration:none;font-weight:bold;">⬆️ 回到顶部</a></p>
+<p style="text-align:center;margin:18px 0 6px;"></p>
 <div class="exportbar"><button onclick="copyAll()">📋 复制全部文字 · 发Leo固化</button></div>
 </div>
 </div>
-<footer>📖 旅行回忆录 · 2026起步 · 一站一坑慢慢填<br><a href="index.html">→ 攻略页</a> · <a href="xibei.html">→ 大西北2020</a></footer>
+<footer>📖 旅行回忆录 · 2026起步 · 一站一坑慢慢填<br> · </footer>
 <div id="toast"></div>
 <script>
 function slotEmpty(el){
@@ -241,6 +245,16 @@ function imgCompress(file){
   });
 }
 function toast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(function(){t.classList.remove('show')},2200)}
+</script>
+<a href="#top" id="topBtn" style="position:fixed;right:18px;bottom:18px;width:42px;height:42px;border-radius:50%;background:#8b7355;color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:18px;box-shadow:0 4px 12px rgba(0,0,0,.2);z-index:99">&#11014;</a>
+
+<script>
+window.addEventListener('scroll', function(){
+    var b = document.getElementById('topBtn');
+    b.style.display = window.scrollY > 400 ? 'flex' : 'none';
+});
+b = document.getElementById('topBtn');
+if (b) b.style.display = 'none';
 </script>
 </body>
 </html>
