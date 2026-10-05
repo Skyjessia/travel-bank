@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>城市回忆 · 样板</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #f7f5f0; color: #333; line-height: 1.7;
+}
+.hero {
+    padding: 55px 20px 40px; text-align: center; background: #ebe6dc;
+}
+.hero .trip-tag {
+    display: inline-block; padding: 3px 12px; border-radius: 20px;
+    background: #c8a24a; color: #fff; font-size: 12px; letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+.hero h1 { font-size: 34px; font-weight: 500; letter-spacing: 2px; }
+.hero .meta { color: #777; font-size: 14px; margin-top: 8px; }
+.wrap { max-width: 900px; margin: 0 auto; padding: 40px 20px 60px; }
+.section-title { font-size: 20px; font-weight: 500; color: #6f5c46; margin-bottom: 16px; }
+
+/* 照片网格：占位slot风格（与回忆册一致） */
+.photo-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 14px; margin-bottom: 45px;
+}
+.slot {
+    aspect-ratio: 4/3; background: #fff; border: 2px dashed #d8d2c4;
+    border-radius: 12px; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; color: #b8ad9a;
+    font-size: 13px; gap: 6px;
+}
+.slot .plus { font-size: 26px; color: #d8d2c4; }
+.slot.filled { border: none; padding: 0; overflow: hidden; }
+.slot.filled img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.slot-note { font-size: 11px; color: #c4bba9; }
+
+/* 文字回忆 */
+.story {
+    background: #fff; border-radius: 14px; padding: 25px 28px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06); color: #555;
+    min-height: 120px; font-size: 15px;
+}
+.story .placeholder { color: #b8ad9a; }
+.story:focus { outline: 2px solid #c8a24a33; }
+
+.footer {
+    padding: 30px 20px; text-align: center; color: #b8ad9a; font-size: 12px;
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+    <span class="trip-tag">2026 晋陕八日 · D4</span>
+    <h1>平遥</h1>
+    <div class="meta">山西 · 晋中市平遥县 · 平遥古城 + 《又见平遥》</div>
+</div>
+
+<div class="wrap">
+
+    <div class="section-title">📷 照片</div>
+    <div class="photo-grid">
+                <div class="slot">
+            <span class="plus">＋</span>
+            照片位 1
+            <span class="slot-note">等 Jess 指认平遥照片后入住</span>
+        </div>
+        <div class="slot">
+            <span class="plus">＋</span>
+            照片位 2
+            <span class="slot-note">等 Jess 指认平遥照片后入住</span>
+        </div>
+        <div class="slot">
+            <span class="plus">＋</span>
+            照片位 3
+            <span class="slot-note">等 Jess 指认平遥照片后入住</span>
+        </div>
+        <div class="slot">
+            <span class="plus">＋</span>
+            照片位 4
+            <span class="slot-note">等 Jess 指认平遥照片后入住</span>
+        </div>
+        <div class="slot">
+            <span class="plus">＋</span>
+            照片位 5
+            <span class="slot-note">等 Jess 指认平遥照片后入住</span>
+        </div>
+        <div class="slot">
+            <span class="plus">＋</span>
+            照片位 6
+            <span class="slot-note">等 Jess 指认平遥照片后入住</span>
+        </div>
+
+    </div>
+
+    <div class="section-title">✏️ 这个城市的故事</div>
+    <div class="story" contenteditable="true">
+        <span class="placeholder">点这里写点什么……（示意：平遥是晋商的心脏，票号里的算盘声好像还在。晚上《又见平遥》看完，走出剧场那一刻，明清的街忽然就亮了灯。）</span>
+    </div>
+
+</div>
+
+<div class="footer">
+    城市回忆 · 独立单元 · memory/2026-shanxi/pingyao/ · 自包含可迁移
+</div>
+
+</body>
+</html>
