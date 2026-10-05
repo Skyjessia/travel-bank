@@ -1105,7 +1105,7 @@ else {
   });
 
   function updateStats(year){
-    var list = markers.filter(function(m){ return year === "all" || m.year === year; });
+    var list = markers.filter(function(m){ return year === "all" || String(m.year) === String(year); });
     var lit = list.filter(function(m){ return !m.passed; });
     var regions = {}, countries = {};
     lit.forEach(function(m){
@@ -1114,7 +1114,7 @@ else {
     });
     var tripText = "";
     if(typeof TRIP_BANK !== "undefined" && year !== "all"){
-      var n = TRIP_BANK.filter(function(t){ return t.year === year; }).length;
+      var n = TRIP_BANK.filter(function(t){ return String(t.year) === String(year); }).length;
       tripText = '<span>🧭 ' + n + ' 次旅行</span>';
     }
     var label = year === "all" ? "全部足迹" : year + " 年";
@@ -1150,7 +1150,7 @@ else {
     function selectYear(value){
       var points = [];
       markers.forEach(function(item){
-        var active = value === "all" || item.year === value;
+        var active = value === "all" || String(item.year) === String(value);
         var element = item.marker.getElement();
         if(element) element.style.opacity = active ? "1" : ".18";
         if(active) points.push([item.place.lat, item.place.lng]);
