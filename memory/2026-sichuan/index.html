@@ -114,34 +114,62 @@ body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft
 var UP = { owner: 'Skyjessia', repo: 'travel-bank', branch: 'main', dir: 'memory/2026-sichuan/assets/' };
 function upToken(){ return localStorage.getItem('gh_up_token'); }
 function upAsk(){
-  var t = prompt('首次配置上传：粘贴 GitHub token\n(fine-grained · 只授权 travel-bank · Contents读写)\n生成: github.com/settings/personal-access-tokens/new');
-  if(t && t.length > 20){ localStorage.setItem('gh_up_token', t.trim()); alert('已保存本机，点＋选照片即可上传'); }
+  var t = prompt('首次配置：粘贴 GitHub token\n(fine-grained · 只授权 travel-bank · Contents读写)\n生成: github.com/settings/personal-access-tokens/new');
+  if(t && t.length > 20){ localStorage.setItem('gh_up_token', t.trim()); alert('已保存本机浏览器'); }
 }
-function upSend(el){
+function toB64(f){
+  return new Promise(function(res){
+    var r = new FileReader();
+    r.onload = function(){ res(r.result.split(',')[1]); };
+    r.readAsDataURL(f);
+  });
+}
+async function upOne(f){
+  var b64 = await toB64(f);
+  var r = await fetch('https://api.github.com/repos/' + UP.owner + '/' + UP.repo +
+    '/contents/' + UP.dir + encodeURIComponent(f.name), {
+    method: 'PUT',
+    headers: { 'Authorization': 'token ' + upToken(), 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message: 'photo ' + f.name, content: b64, branch: UP.branch })
+  });
+  return r.ok;
+}
+function upSend(){
   if(!upToken()){ upAsk(); return; }
   var inp = document.createElement('input');
-  inp.type = 'file'; inp.accept = 'image/*';
-  inp.onchange = function(){
-    var f = inp.files[0]; if(!f) return;
-    var name = el.getAttribute('data-f') || f.name;
-    if(!/\.(jpg|jpeg|png|webp)$/i.test(name)) name += '.jpg';
-    var reader = new FileReader();
-    reader.onload = function(){
-      var url = 'https://api.github.com/repos/' + UP.owner + '/' + UP.repo + '/contents/' + UP.dir + name;
-      el.innerHTML = '<span style="font-size:12px;color:#8b7355">上传中...</span>';
-      fetch(url, { method: 'PUT',
-        headers: { 'Authorization': 'token ' + upToken(), 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: 'photo ' + name, content: reader.result.split(',')[1], branch: UP.branch })
-      }).then(function(r){ return r.json(); }).then(function(j){
-        if(j.content){ el.innerHTML = '<img src="' + UP.dir + name + '?t=' + Date.now() + '" style="width:100%;height:100%;object-fit:cover">'; el.onclick = null; }
-        else { el.innerHTML = '<span class="plus">＋</span>' + (j.message || 'fail');
-          if((j.message||'').indexOf('Bad credentials')>-1){ localStorage.removeItem('gh_up_token'); alert('token失效，点＋重新配置'); } }
-      });
-    };
-    reader.readAsDataURL(f);
+  inp.type = 'file'; inp.accept = 'image/*'; inp.multiple = true;
+  inp.onchange = async function(){
+    var fs = Array.from(inp.files || []);
+    if(!fs.length) return;
+    var ok = 0, fail = 0;
+    for(var i = 0; i < fs.length; i++){
+      try { if(await upOne(fs[i])) ok++; else fail++; }
+      catch(e){ fail++; }
+    }
+    alert('上传完成：成功 ' + ok + ' 张' + (fail ? '，失败 ' + fail + ' 张' : '') + '\n刷新页面即可看到');
+    if(ok) location.reload();
   };
   inp.click();
 }
+function loadGallery(){
+  fetch('https://api.github.com/repos/' + UP.owner + '/' + UP.repo + '/contents/' + UP.dir)
+  .then(function(r){ return r.json(); })
+  .then(function(list){
+    if(!Array.isArray(list)) return;
+    var imgs = list.filter(function(f){
+      return /\.(jpg|jpeg|png|webp)$/i.test(f.name) && f.download_url;
+    }).sort(function(a,b){ return a.name < b.name ? -1 : 1; });
+    var slots = document.querySelectorAll('.slot');
+    imgs.forEach(function(f, i){
+      if(i >= slots.length) return;
+      slots[i].innerHTML = '<img src="' + f.download_url + '" loading="lazy" alt="' + f.name + '">';
+      slots[i].style.borderStyle = 'solid';
+      slots[i].removeAttribute('onclick');
+    });
+  }).catch(function(){});
+}
+loadGallery();
 </script>
+
 </body>
 </html>

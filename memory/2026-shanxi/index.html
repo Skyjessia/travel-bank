@@ -189,12 +189,33 @@ var REPO='Skyjessia/Shanxitravelplan',DIR='assets/';
 function openSetup(){var p=document.getElementById('setup');p.classList.add('show');document.getElementById('tokin').value=localStorage.getItem('sx_gh_token')||'';}
 function saveTok(){var v=document.getElementById('tokin').value.trim();if(!v){toast('先粘贴token');return;}localStorage.setItem('sx_gh_token',v);document.getElementById('setup').classList.remove('show');toast('口令已存本机，点照片坑即可上传');}
 function haveTok(){return !!localStorage.getItem('sx_gh_token');}
-function pickUpload(sl){
-  if(!haveTok()){toast('先点右上 ⚙️ 设置上传口令');openSetup();return;}
-  var f=sl.getAttribute('data-f');
-  var inp=document.createElement('input');inp.type='file';
-  inp.accept=f.indexOf('.mp4')>-1?'video/*':'image/*';
-  inp.onchange=function(){if(inp.files[0])doUpload(sl,f,inp.files[0]);};
+function pickUpload(){
+  if(!localStorage.getItem('gh_up_token')){
+    var t = prompt('首次配置：粘贴 GitHub token（fine-grained·只授权travel-bank·Contents读写）');
+    if(t && t.length > 20){ localStorage.setItem('gh_up_token', t.trim()); }
+    return;
+  }
+  var inp = document.createElement('input');
+  inp.type = 'file'; inp.accept = 'image/*'; inp.multiple = true;
+  inp.onchange = async function(){
+    var fs = Array.from(inp.files || []);
+    var ok = 0;
+    for(var i = 0; i < fs.length; i++){
+      var f = fs[i];
+      var b64 = await new Promise(function(res){
+        var r = new FileReader();
+        r.onload = function(){ res(r.result.split(',')[1]); };
+        r.readAsDataURL(f);
+      });
+      var resp = await fetch('https://api.github.com/repos/Skyjessia/travel-bank/contents/memory/2026-shanxi/assets/' + encodeURIComponent(f.name), {
+        method: 'PUT',
+        headers: { 'Authorization': 'token ' + localStorage.getItem('gh_up_token'), 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: 'photo ' + f.name, content: b64, branch: 'main' })
+      });
+      if(resp.ok) ok++;
+    }
+    alert('追加成功 ' + ok + ' 张到晋陕回忆册\n刷新页面查看');
+  };
   inp.click();
 }
 function doUpload(sl,f,file){
