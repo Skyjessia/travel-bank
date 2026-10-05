@@ -11,7 +11,7 @@ TRIP_BANK.push({
     "status": "completed",
     "memoryStatus": "partial",
     "description": "14天南北岛大环线：怀托摩萤火虫洞·霍比屯·汤加里罗火山徒步·胡克冰川·皇后镇——稻稻家的Giver带队。",
-    "guidePage": "",
+    "guidePage": "guide/2019-newzealand.html",
     "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2019-newzealand/",
     "places": ["北岛", "南岛"]
 });
