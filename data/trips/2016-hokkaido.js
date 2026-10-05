@@ -9,9 +9,9 @@ TRIP_BANK.push({
     "cover": "",
     "type": "trip",
     "status": "completed",
-    "memoryStatus": "none",
+    "memoryStatus": "partial",
     "description": "十年旅行的起点：2016年红叶季，9城环线，函馆山千万夜景，摩周湖的爱奴传说。",
-    "guidePage": "",
+    "guidePage": "guide/2016-hokkaido.html",
     "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2016-hokkaido/",
     "places": ["北海道"]
 });
