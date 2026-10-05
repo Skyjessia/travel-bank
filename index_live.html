@@ -1048,61 +1048,18 @@ else {
 
 
 <!-- 点亮地图 2.0 暗夜星球版 · 设计:ChatGPT 施工:Leo 数据:Jess -->
+<!-- 点亮地图 1.1 懒加载版 · 设计:ChatGPT 施工:Leo 融合:暗色底图+类型修复+统计行 -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 (function(){
   if(typeof L === "undefined"){ console.log("Leaflet 没有加载"); return; }
   var safePlaces = (typeof PLACE_BANK !== "undefined" && Array.isArray(PLACE_BANK)) ? PLACE_BANK : [];
+  var mapStarted = false;
   var yearMap = {};
   if(typeof TRIP_BANK !== "undefined" && Array.isArray(TRIP_BANK)){
     TRIP_BANK.forEach(function(trip){ yearMap[trip.id] = trip.year; });
   }
-  var worldMap = L.map("worldMap", {
-    scrollWheelZoom: true, zoomControl: true, zoomSnap: .5, zoomDelta: .5,
-    wheelPxPerZoomLevel: 160, updateWhenIdle: true, updateWhenZooming: false, preferCanvas: true
-  }).setView([30, 100], 3);
-  L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}", {
-    attribution: "© Esri · © OpenStreetMap contributors", maxZoom: 7,
-    keepBuffer: 2, updateWhenIdle: true, updateWhenZooming: false
-  }).addTo(worldMap);
-
   var markers = [];
-  var groupedTrips = {};
-  safePlaces.forEach(function(place){
-    if(place.lat === undefined || place.lng === undefined) return;
-    var passed = place.status === "passed";
-    var year = yearMap[place.tripId];
-    var cls = passed ? "travel-glow-marker travel-passed-marker" : "travel-glow-marker";
-    var marker = L.marker([place.lat, place.lng], {
-      icon: L.divIcon({ className: "", html: '<div class="' + cls + '"></div>', iconSize: [18,18], iconAnchor: [9,9] })
-    });
-    var sites = place.sites && place.sites.length
-      ? '<div style="margin-top:6px;color:#f0d9a8;">📍 ' + place.sites.join(" · ") + '</div>' : "";
-    var note = place.note ? '<div style="margin-top:5px;color:#9fb3bd;font-size:12px;">' + place.note + '</div>' : "";
-    var yearText = year ? '<span style="color:#9fb3bd;font-size:12px;">· ' + year + '</span>' : "";
-    marker.bindPopup(
-      '<div style="min-width:170px;font-size:14px;">' +
-      '<strong style="font-size:17px;color:#222;">' + place.city + '</strong>' +
-      (passed ? '<span style="color:#aaa;font-size:12px;"> 路过</span>' : "") +
-      '<div style="color:#777;font-size:12px;margin-top:3px;">' + place.country + ' · ' + (place.region || "") + yearText + '</div>' +
-      sites + note + '</div>'
-    );
-    marker.addTo(worldMap);
-    markers.push({ marker: marker, place: place, year: year, passed: passed });
-    if(place.tripId){
-      if(!groupedTrips[place.tripId]) groupedTrips[place.tripId] = [];
-      groupedTrips[place.tripId].push(place);
-    }
-  });
-
-  Object.keys(groupedTrips).forEach(function(tid){
-    var pts = groupedTrips[tid];
-    if(pts.length < 2) return;
-    L.polyline(pts.map(function(p){ return [p.lat, p.lng]; }), {
-      className: "travel-route", color: "#f5c96b", weight: 1.3,
-      opacity: .45, dashArray: "6 9", interactive: false
-    }).addTo(worldMap);
-  });
 
   function updateStats(year){
     var list = markers.filter(function(m){ return year === "all" || String(m.year) === String(year); });
@@ -1127,58 +1084,130 @@ else {
     }
   }
 
-  var filter = document.getElementById("yearFilter");
-  if(filter){
-    var years = [];
-    Object.keys(yearMap).forEach(function(k){
-      var y = yearMap[k];
-      if(years.indexOf(y) < 0) years.push(y);
-    });
-    years.sort(function(a,b){ return b - a; });
-    var buttons = [];
-    function createButton(label, value){
-      var button = document.createElement("button");
-      button.className = "year-btn";
-      button.textContent = label;
-      button.dataset.value = value;
-      filter.appendChild(button);
-      buttons.push(button);
-      return button;
-    }
-    var btnAll = createButton("全部足迹", "all");
-    years.forEach(function(y){ createButton(String(y), y); });
-    function selectYear(value){
-      var points = [];
-      markers.forEach(function(item){
-        var active = value === "all" || String(item.year) === String(value);
-        var element = item.marker.getElement();
-        if(element) element.style.opacity = active ? "1" : ".18";
-        if(active) points.push([item.place.lat, item.place.lng]);
+  function startWorldMap(){
+    if(mapStarted) return;
+    mapStarted = true;
+
+    var worldMap = L.map("worldMap", {
+      scrollWheelZoom: true, zoomControl: true, zoomSnap: .5, zoomDelta: .5,
+      wheelPxPerZoomLevel: 160, updateWhenIdle: true, updateWhenZooming: false, preferCanvas: true
+    }).setView([30, 100], 3);
+
+    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}", {
+      attribution: "© Esri · © OpenStreetMap contributors", maxZoom: 7,
+      keepBuffer: 2, updateWhenIdle: true, updateWhenZooming: false
+    }).addTo(worldMap);
+
+    var groupedTrips = {};
+    safePlaces.forEach(function(place){
+      if(place.lat === undefined || place.lng === undefined) return;
+      var passed = place.status === "passed";
+      var year = yearMap[place.tripId];
+      var cls = passed ? "travel-glow-marker travel-passed-marker" : "travel-glow-marker";
+      var marker = L.marker([place.lat, place.lng], {
+        icon: L.divIcon({ className: "", html: '<div class="' + cls + '"></div>', iconSize: [18,18], iconAnchor: [9,9] })
       });
-      buttons.forEach(function(button){
-        button.classList.toggle("active", String(button.dataset.value) === String(value));
-      });
-      updateStats(value);
-      if(value !== "all" && points.length){
-        worldMap.flyToBounds(L.latLngBounds(points).pad(.35), { duration: 1 });
-      } else {
-        worldMap.flyTo([30, 100], 3, { duration: 1 });
+      var sites = place.sites && place.sites.length
+        ? '<div style="margin-top:6px;color:#f0d9a8;">📍 ' + place.sites.join(" · ") + '</div>' : "";
+      var note = place.note ? '<div style="margin-top:5px;color:#9fb3bd;font-size:12px;">' + place.note + '</div>' : "";
+      var yearText = year ? '<span style="color:#9fb3bd;font-size:12px;">· ' + year + '</span>' : "";
+      marker.bindPopup(
+        '<div style="min-width:170px;font-size:14px;">' +
+        '<strong style="font-size:17px;color:#222;">' + place.city + '</strong>' +
+        (passed ? '<span style="color:#aaa;font-size:12px;"> 路过</span>' : "") +
+        '<div style="color:#777;font-size:12px;margin-top:3px;">' + place.country + ' · ' + (place.region || "") + yearText + '</div>' +
+        sites + note + '</div>'
+      );
+      marker.addTo(worldMap);
+      markers.push({ marker: marker, place: place, year: year, passed: passed });
+      if(place.tripId){
+        if(!groupedTrips[place.tripId]) groupedTrips[place.tripId] = [];
+        groupedTrips[place.tripId].push(place);
       }
-    }
-    buttons.forEach(function(button){
-      button.addEventListener("click", function(){ selectYear(button.dataset.value); });
     });
-    selectYear("all");
-  } else {
-    updateStats("all");
+
+    Object.keys(groupedTrips).forEach(function(tid){
+      var pts = groupedTrips[tid];
+      if(pts.length < 2) return;
+      L.polyline(pts.map(function(p){ return [p.lat, p.lng]; }), {
+        className: "travel-route", color: "#f5c96b", weight: 1.3,
+        opacity: .45, dashArray: "6 9", interactive: false
+      }).addTo(worldMap);
+    });
+
+    var filter = document.getElementById("yearFilter");
+    if(filter){
+      var years = [];
+      Object.keys(yearMap).forEach(function(k){
+        var y = yearMap[k];
+        if(years.indexOf(y) < 0) years.push(y);
+      });
+      years.sort(function(a,b){ return b - a; });
+      var buttons = [];
+      function createButton(label, value){
+        var button = document.createElement("button");
+        button.className = "year-btn";
+        button.textContent = label;
+        button.dataset.value = value;
+        filter.appendChild(button);
+        buttons.push(button);
+        return button;
+      }
+      createButton("全部足迹", "all");
+      years.forEach(function(y){ createButton(String(y), y); });
+      function selectYear(value){
+        var points = [];
+        markers.forEach(function(item){
+          var active = value === "all" || String(item.year) === String(value);
+          var element = item.marker.getElement();
+          if(element) element.style.opacity = active ? "1" : ".18";
+          if(active) points.push([item.place.lat, item.place.lng]);
+        });
+        buttons.forEach(function(button){
+          button.classList.toggle("active", String(button.dataset.value) === String(value));
+        });
+        updateStats(value);
+        if(value !== "all" && points.length){
+          worldMap.flyToBounds(L.latLngBounds(points).pad(.35), { duration: 1 });
+        } else {
+          worldMap.flyTo([30, 100], 3, { duration: 1 });
+        }
+      }
+      buttons.forEach(function(button){
+        button.addEventListener("click", function(){ selectYear(button.dataset.value); });
+      });
+      selectYear("all");
+    } else {
+      updateStats("all");
+    }
+
+    setTimeout(function(){ worldMap.invalidateSize(); }, 300);
+
+    var loading = document.getElementById("mapLoading");
+    setTimeout(function(){
+      if(loading) loading.classList.add("hide");
+    }, 500);
   }
 
-  var loading = document.getElementById("mapLoading");
-  setTimeout(function(){
-    if(loading) loading.classList.add("hide");
-  }, 650);
+  var mapBox = document.getElementById("worldMap");
+  if(!mapBox){ console.log("找不到 worldMap"); return; }
+
+  if("IntersectionObserver" in window){
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          startWorldMap();
+          observer.disconnect();
+        }
+      });
+    }, { root: null, rootMargin: "500px 0px", threshold: .01 });
+    observer.observe(mapBox);
+  } else {
+    startWorldMap();
+  }
 })();
 </script>
+
 </body>
 
 </html>
