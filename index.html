@@ -896,6 +896,8 @@ else {
 
                     '<span style="font-size:12px;color:#b8ad9a">' + (TRIP_BANK.filter(function(t){return t.year === trip.year;}).length) + ' 次旅行</span>';
 
+                yDiv.dataset.year = trip.year;
+
                 tripGrid.appendChild(yDiv);
 
             }
@@ -910,6 +912,8 @@ else {
 
         card.className =
             "trip-card";
+
+        card.dataset.year = trip.year;
 
 
         /* --------------------------------
@@ -1066,6 +1070,25 @@ else {
 
 }
 
+
+/* 年份联动：地图按钮 → 卡片同步过滤 */
+
+window.filterCardsByYear = function(value){
+
+    var children = tripGrid.children;
+
+    for(var i = 0; i < children.length; i++){
+
+        var el = children[i];
+
+        var show = value === "all" || String(el.dataset.year) === String(value);
+
+        el.style.display = show ? "" : "none";
+
+    }
+
+};
+
 </script>
 
 
@@ -1189,6 +1212,7 @@ else {
           button.classList.toggle("active", String(button.dataset.value) === String(value));
         });
         updateStats(value);
+        if(window.filterCardsByYear) window.filterCardsByYear(value);
         if(value !== "all" && points.length){
           worldMap.flyToBounds(L.latLngBounds(points).pad(.35), { duration: 1 });
         } else {
