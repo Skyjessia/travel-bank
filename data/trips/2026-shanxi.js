@@ -19,7 +19,7 @@ TRIP_BANK.push(
     "memoryStatus": "partial",
     "description": "一次关于山西与陕西的八日旅行。",
     "guidePage": "https://skyjessia.github.io/Shanxitravelplan/",
-    "memoryPage": "https://skyjessia.github.io/Shanxitravelplan/memory.html",
+    "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2026-shanxi/",
     "places": [
         "山西",
         "陕西"
