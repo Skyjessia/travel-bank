@@ -3,7 +3,7 @@ TRIP_BANK.push({
     "year": 2015, "startDate": "2015-07-02", "endDate": "2015-07-14",
     "cover": "", "type": "trip", "status": "completed", "memoryStatus": "none",
     "description": "十年档案的真正起点：9¾站台出发——爱丁堡城堡·剑桥徐志摩诗碑·查令十字街84号·温莎·巴斯罗马浴场·诺丁山。",
-    "guidePage": "", "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2015-uk/", "places": ["英格兰", "苏格兰"]
+    "guidePage": "guide/2015-uk.html", "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2015-uk/", "places": ["英格兰", "苏格兰"]
 });
 PLACE_BANK.push(
     { "tripId": "2015-uk", "country": "英国", "region": "英格兰", "city": "伦敦", "lat": 51.5074, "lng": -0.1278, "day": 1, "status": "visited",

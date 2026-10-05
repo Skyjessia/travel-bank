@@ -11,7 +11,7 @@ TRIP_BANK.push({
     "status": "completed",
     "memoryStatus": "partial",
     "description": "16天文艺复兴主线：梵蒂冈·乌菲兹·圣母百花·威尼斯水城·圣西罗，CA967出发。",
-    "guidePage": "",
+    "guidePage": "guide/2024-italy.html",
     "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2024-italy/",
     "places": ["拉齐奥", "托斯卡纳", "威尼托", "伦巴第"]
 });

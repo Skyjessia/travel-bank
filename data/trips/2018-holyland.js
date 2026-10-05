@@ -3,7 +3,7 @@ TRIP_BANK.push({
     "country": "以色列", "year": 2018, "startDate": "2018-02-06", "endDate": "2018-02-19",
     "cover": "", "type": "trip", "status": "completed", "memoryStatus": "none",
     "description": "14天三大宗教圣地线：特拉维夫雅法·海法拿撒勒·约旦安曼佩特拉·死海马萨达·伯利恒·耶路撒冷旧城。",
-    "guidePage": "", "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2018-holyland/", "places": ["特拉维夫", "北部区", "耶路撒冷", "安曼", "马安", "伯利恒"]
+    "guidePage": "guide/2018-holyland.html", "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2018-holyland/", "places": ["特拉维夫", "北部区", "耶路撒冷", "安曼", "马安", "伯利恒"]
 });
 PLACE_BANK.push(
     { "tripId": "2018-holyland", "country": "以色列", "region": "特拉维夫", "city": "特拉维夫", "lat": 32.0853, "lng": 34.7818, "day": 1, "status": "visited", "sites": ["特拉维夫港口", "拉宾广场", "包豪斯建筑群", "雅法老城", "圣彼得教堂"], "note": "地中海边的不眠城·包豪斯白城" },

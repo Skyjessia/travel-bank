@@ -18,7 +18,7 @@ TRIP_BANK.push(
     "status": "completed",
     "memoryStatus": "partial",
     "description": "3000公里环线，嘉峪关没拍照成了缺憾美。",
-    "guidePage": "",
+    "guidePage": "guide/2020-xibei.html",
     "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2020-xibei/",
     "places": [
         "青海",

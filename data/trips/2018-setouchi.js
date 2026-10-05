@@ -3,7 +3,7 @@ TRIP_BANK.push({
     "year": 2018, "startDate": "2018-06-26", "endDate": "2018-07-01",
     "cover": "", "type": "trip", "status": "completed", "memoryStatus": "partial",
     "description": "艺术跳岛6天：仓敷美观·直岛草间弥生黄南瓜·地中美术馆·丰岛美术馆·心脏音资料馆·高松。",
-    "guidePage": "", "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2018-setouchi/", "places": ["冈山", "香川"]
+    "guidePage": "guide/2018-setouchi.html", "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2018-setouchi/", "places": ["冈山", "香川"]
 });
 PLACE_BANK.push(
     { "tripId": "2018-setouchi", "country": "日本", "region": "冈山", "city": "仓敷", "lat": 34.5852, "lng": 133.7722, "day": 1, "status": "visited",

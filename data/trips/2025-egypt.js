@@ -11,7 +11,7 @@ TRIP_BANK.push({
     "status": "completed",
     "memoryStatus": "partial",
     "description": "19天穿越七千年：吉萨金字塔·阿布辛贝·尼罗河游轮·卢克索神庙·红海赫尔格达，三大一小。",
-    "guidePage": "",
+    "guidePage": "guide/2025-egypt.html",
     "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2025-egypt/",
     "places": ["开罗省", "阿斯旺省", "卢克索省", "红海省"]
 });

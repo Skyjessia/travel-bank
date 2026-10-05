@@ -3,7 +3,7 @@ TRIP_BANK.push({
     "country": "克罗地亚", "year": 2017, "startDate": "2017-09-23", "endDate": "2017-10-05",
     "cover": "", "type": "trip", "status": "completed", "memoryStatus": "none",
     "description": "13天申根签多国线：荷兰阿姆斯特丹→克罗地亚十六湖/扎达尔/斯普利特/杜布罗夫尼克→波黑莫斯塔尔→黑山科托尔。",
-    "guidePage": "", "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2017-balkan/", "places": ["北荷兰", "利卡-塞尼", "滨海-达尔马提亚", "杜布罗夫尼克-内雷特瓦", "科托尔湾"]
+    "guidePage": "guide/2017-balkan.html", "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2017-balkan/", "places": ["北荷兰", "利卡-塞尼", "滨海-达尔马提亚", "杜布罗夫尼克-内雷特瓦", "科托尔湾"]
 });
 PLACE_BANK.push(
     { "tripId": "2017-balkan", "country": "荷兰", "region": "北荷兰", "city": "阿姆斯特丹", "lat": 52.3676, "lng": 4.9041, "day": 1, "status": "visited", "sites": ["梵高美术馆", "阿姆斯特丹王宫"], "note": "欧洲之门的第一站" },
