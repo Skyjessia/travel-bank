@@ -13,7 +13,7 @@ TRIP_BANK.push(
     "year": 2026,
     "startDate": "2026-09-xx",
     "endDate": "2026-09-xx",
-    "cover": "images/memory/2026-shanxi/p01.jpg",
+    "cover": "images/covers/2026-shanxi.jpg",
     "type": "trip",
     "status": "completed",
     "memoryStatus": "partial",
