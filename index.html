@@ -1052,17 +1052,15 @@ if (typeof L !== "undefined") {
 
     L.tileLayer(
 
-        "https://webrd0{s}.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}",
+        "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
 
         {
 
-            subdomains: ["1", "2", "3", "4"],
+            subdomains: "abcd",
 
-            attribution: "© 高德地图",
+            attribution: '© <a href="https://www.openstreetmap.org/copyright">OSM</a> © CARTO',
 
-            maxZoom: 18,
-
-            /* —— 瓦片缓存优化：多缓存周边瓦片，往返缩放直接复用 —— */
+            maxZoom: 19,
 
             keepBuffer: 4
 
