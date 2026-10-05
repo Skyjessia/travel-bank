@@ -13,7 +13,7 @@ TRIP_BANK.push(
     "year": 2020,
     "startDate": "2020-08-24",
     "endDate": "2020-09-02",
-    "cover": "images/memory/2020-xibei/n01.jpg",
+    "cover": "images/covers/2020-xibei.jpg",
     "type": "trip",
     "status": "completed",
     "memoryStatus": "partial",

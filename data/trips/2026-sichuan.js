@@ -11,7 +11,7 @@ TRIP_BANK.push({
     "year": 2026,
     "startDate": "2026-06-13",
     "endDate": "2026-06-18",
-    "cover": "",
+    "cover": "images/covers/2026-sichuan.jpg",
     "type": "trip",
     "status": "completed",
     "memoryStatus": "none",
