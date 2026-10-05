@@ -16,10 +16,10 @@ TRIP_BANK.push(
     "cover": "images/covers/2026-russia.jpg",
     "type": "trip",
     "status": "completed",
-    "memoryStatus": "none",
+    "memoryStatus": "partial",
     "description": "贝加尔湖蓝冰+北极圈极光，11天，奥利洪岛住了3晚小木屋。",
     "guidePage": "",
-    "memoryPage": "",
+    "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2026-russia/",
     "places": [
         "伊尔库茨克州",
         "摩尔曼斯克州"
