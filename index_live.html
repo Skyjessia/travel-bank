@@ -690,37 +690,6 @@ a {
          旅行足迹
     ==================================== -->
 
-    <section>
-
-        <h2 class="section-title">
-            我的旅行足迹
-        </h2>
-
-        <p class="section-intro">
-            这些旅行，是我人生走过的一些地方。
-            未来，我会继续把它们一点一点记录下来。
-        </p>
-
-
-        <!--
-            卡片从数据银行自动生成：
-            data/trips/ 目录 · 一个行程一份文件
-            新增旅行见 data/bank.js 顶部 SOP
-        -->
-
-        <div
-            class="trip-grid"
-            id="tripGrid"
-        ></div>
-
-    </section>
-
-
-
-    <!-- ====================================
-         我的旅行地图
-    ==================================== -->
-
     <section class="map-section">
 
         <h2 class="section-title">
@@ -756,6 +725,38 @@ a {
         </div>
 
     </section>
+
+    <section>
+
+        <h2 class="section-title">
+            我的旅行足迹
+        </h2>
+
+        <p class="section-intro">
+            这些旅行，是我人生走过的一些地方。
+            未来，我会继续把它们一点一点记录下来。
+        </p>
+
+
+        <!--
+            卡片从数据银行自动生成：
+            data/trips/ 目录 · 一个行程一份文件
+            新增旅行见 data/bank.js 顶部 SOP
+        -->
+
+        <div
+            class="trip-grid"
+            id="tripGrid"
+        ></div>
+
+    </section>
+
+
+
+    <!-- ====================================
+         我的旅行地图
+    ==================================== -->
+
 
 
 </main>
@@ -877,7 +878,28 @@ else {
         );
 
 
+        var lastYear = null;
+
         TRIP_BANK.forEach(trip => {
+
+            if(trip.year !== lastYear){
+
+                lastYear = trip.year;
+
+                var yDiv = document.createElement("div");
+
+                yDiv.style.cssText = "grid-column:1/-1;display:flex;align-items:center;gap:12px;margin:26px 4px 2px;";
+
+                yDiv.innerHTML = '<span style="font-size:22px;font-weight:500;color:#6f5c46;letter-spacing:1px">' + trip.year + '</span>' +
+
+                    '<span style="flex:1;height:1px;background:#e3dccf"></span>' +
+
+                    '<span style="font-size:12px;color:#b8ad9a">' + (TRIP_BANK.filter(function(t){return t.year === trip.year;}).length) + ' 次旅行</span>';
+
+                tripGrid.appendChild(yDiv);
+
+            }
+
 
 
         /* 创建卡片 */
