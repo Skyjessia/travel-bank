@@ -8,7 +8,7 @@ TRIP_BANK.push({
     "year": 2021,
     "startDate": "2021-09-18",
     "endDate": "2021-09-25",
-    "cover": "",
+    "cover": "images/covers/2021-beijiang.jpg",
     "type": "trip",
     "status": "completed",
     "memoryStatus": "none",

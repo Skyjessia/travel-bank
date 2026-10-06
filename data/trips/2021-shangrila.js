@@ -8,7 +8,7 @@ TRIP_BANK.push({
     "year": 2021,
     "startDate": "2021-03-20",
     "endDate": "2021-03-27",
-    "cover": "",
+    "cover": "images/covers/2021-shangrila.jpg",
     "type": "trip",
     "status": "completed",
     "memoryStatus": "none",
