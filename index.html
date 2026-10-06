@@ -1242,7 +1242,8 @@ window.filterCardsByYear = function(value){
   {
     attribution: "© Esri · © OpenStreetMap contributors",
     minZoom: 2,
-    maxZoom: 7,
+    maxZoom: 10,
+    maxNativeZoom: 7,
 
     // 禁止世界横向无限重复
     noWrap: true,
@@ -1252,6 +1253,75 @@ window.filterCardsByYear = function(value){
     updateWhenZooming: false
   }
 ).addTo(worldMap);
+
+  /* ===== 省市县分级标注系统（2026-10-06） ===== */
+  var PROV = [
+    ["黑龙江",45.8,126.5],["吉林",43.9,125.3],["辽宁",41.8,123.4],
+    ["北京",39.9,116.4],["天津",39.1,117.2],["河北",38.0,114.5],
+    ["山西",37.9,112.5],["内蒙古",40.8,111.7],["山东",36.7,117.0],
+    ["河南",34.8,113.7],["江苏",32.1,118.8],["上海",31.2,121.5],
+    ["浙江",30.3,120.2],["安徽",31.8,117.3],["湖北",30.6,114.3],
+    ["湖南",28.2,113.0],["江西",28.7,115.9],["福建",26.1,119.3],
+    ["广东",23.1,113.3],["广西",22.8,108.3],["海南",20.0,110.3],
+    ["贵州",26.6,106.7],["云南",25.0,102.7],["四川",30.7,104.1],
+    ["重庆",29.6,106.5],["西藏",29.7,91.1],["陕西",34.3,108.9],
+    ["甘肃",36.1,103.8],["宁夏",38.5,106.3],["青海",36.6,101.8],
+    ["新疆",43.8,87.6],["台湾",25.0,121.5],["香港",22.3,114.2],["澳门",22.2,113.5]
+  ];
+  var provLayer = L.layerGroup();
+  PROV.forEach(function(p){
+    provLayer.addLayer(L.marker([p[1], p[2]], {
+      icon: L.divIcon({className:"prov-label", html:p[0], iconSize:null}),
+      interactive:false, keyboard:false
+    }));
+  });
+  var cityLabelLayer = L.layerGroup();
+  (typeof PLACE_BANK !== "undefined" ? PLACE_BANK : []).forEach(function(p){
+    if(p.lat && p.city && p.status !== "passed"){
+      cityLabelLayer.addLayer(L.marker([p.lat, p.lng], {
+        icon: L.divIcon({className:"city-label", html:"<span>"+p.city+"</span>", iconSize:null}),
+        interactive:false, keyboard:false
+      }));
+    }
+  });
+  var provBorder = null;
+  fetch("https://geo.datav.aliyun.com/areas_v3/bound/100000_full.json")
+    .then(function(r){ return r.json(); })
+    .then(function(g){
+      provBorder = L.geoJSON(g, {style:{color:"#c8a24a", weight:0.8, opacity:0.4, fill:false}, interactive:false});
+      syncLabels();
+    })
+    .catch(function(){ syncLabels(); });
+  function syncLabels(){
+    var z = worldMap.getZoom();
+    if(z >= 5 && z < 7){
+      if(!worldMap.hasLayer(provLayer)) provLayer.addTo(worldMap);
+      if(provBorder && !worldMap.hasLayer(provBorder)) provBorder.addTo(worldMap);
+    } else {
+      if(worldMap.hasLayer(provLayer)) worldMap.removeLayer(provLayer);
+      if(provBorder && worldMap.hasLayer(provBorder)) worldMap.removeLayer(provBorder);
+    }
+    if(z >= 6){
+      if(!worldMap.hasLayer(cityLabelLayer)) cityLabelLayer.addTo(worldMap);
+    } else {
+      if(worldMap.hasLayer(cityLabelLayer)) worldMap.removeLayer(cityLabelLayer);
+    }
+  }
+  worldMap.on("zoomend", syncLabels);
+  worldMap.whenReady(function(){ setTimeout(syncLabels, 300); });
+
+  /* ===== 分级标注样式 ===== */
+  var labelStyle = document.createElement("style");
+  labelStyle.textContent = [
+    ".prov-label{font-size:12px;color:rgba(200,162,74,.75);letter-spacing:3px;",
+    "  white-space:nowrap;text-shadow:0 0 4px rgba(0,0,0,.9);transform:translate(-50%,-50%);",
+    "  pointer-events:none;font-family:-apple-system,'PingFang SC',sans-serif}",
+    ".city-label{font-size:11px;color:rgba(255,250,240,.92);white-space:nowrap;",
+    "  text-shadow:0 0 5px rgba(0,0,0,.95), 0 0 2px rgba(0,0,0,.9);transform:translate(-50%,-50%);",
+    "  pointer-events:none;font-family:-apple-system,'PingFang SC',sans-serif}",
+    ".city-label span{display:block;transform:translateY(-14px)}"
+  ].join("");
+  document.head.appendChild(labelStyle);
 
     var groupedTrips = {};
     safePlaces.forEach(function(place){
