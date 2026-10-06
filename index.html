@@ -1206,14 +1206,52 @@ window.filterCardsByYear = function(value){
     mapStarted = true;
 
     var worldMap = L.map("worldMap", {
-      scrollWheelZoom: true, zoomControl: true, zoomSnap: .5, zoomDelta: .5,
-      wheelPxPerZoomLevel: 160, updateWhenIdle: true, updateWhenZooming: false, preferCanvas: true
-    }).setView([30, 100], 3);
+  scrollWheelZoom: true,
+  zoomControl: true,
+  zoomSnap: 0.5,
+  zoomDelta: 0.5,
+  wheelPxPerZoomLevel: 160,
+  updateWhenIdle: true,
+  updateWhenZooming: false,
+  preferCanvas: true,
 
-    L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}", {
-      attribution: "© Esri · © OpenStreetMap contributors", maxZoom: 7,
-      keepBuffer: 2, updateWhenIdle: true, updateWhenZooming: false
-    }).addTo(worldMap);
+  // 最小缩放，不允许无限缩小
+  minZoom: 2,
+
+  // 限制地图只能停留在一个世界范围内
+  maxBounds: [
+    [-85, -180],
+    [85, 180]
+  ],
+
+  // 到达边界后不能继续拖出去
+  maxBoundsViscosity: 1.0
+
+}).fitBounds(
+  [
+    [-55, -180],
+    [75, 180]
+  ],
+  {
+    padding: [10, 10]
+  }
+);
+
+   L.tileLayer(
+  "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",
+  {
+    attribution: "© Esri · © OpenStreetMap contributors",
+    minZoom: 2,
+    maxZoom: 7,
+
+    // 禁止世界横向无限重复
+    noWrap: true,
+
+    keepBuffer: 2,
+    updateWhenIdle: true,
+    updateWhenZooming: false
+  }
+).addTo(worldMap);
 
     var groupedTrips = {};
     safePlaces.forEach(function(place){
