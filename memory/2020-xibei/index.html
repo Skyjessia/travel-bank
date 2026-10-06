@@ -39,6 +39,14 @@ body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft
 .story .placeholder { color:#b8ad9a; }
 .footer { padding:28px 20px; text-align:center; color:#b8ad9a; font-size:12px; }
 @media (max-width: 600px){ .hero h1{font-size:26px} .dbody{grid-template-columns:repeat(2,1fr)} }
+
+/* ===== 统一回首页按钮 ===== */
+.home-btn{position:fixed;top:14px;right:14px;z-index:999;background:#4a4034;color:#fff;
+padding:8px 15px;border-radius:22px;font-size:13px;text-decoration:none;
+box-shadow:0 2px 10px rgba(0,0,0,.22);font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;
+transition:background .2s}
+.home-btn:hover{background:#6b5b45}
+.home-btn::before{content:'🗺️ '}
 </style>
 
 </head>
@@ -205,5 +213,6 @@ function loadGallery(){
 loadGallery();
 </script>
 
+<a class="home-btn" href="../../">回到我的旅行地图</a>
 </body>
 </html>

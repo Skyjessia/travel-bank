@@ -32,6 +32,14 @@ figure.half + figure.half{margin-left:10px}
 .todo{display:inline-block;margin:8px 0;background:#fff6dc;color:#b8946a;font-size:12.5px;border-radius:10px;padding:3px 12px}
 .sun{background:linear-gradient(90deg,#fdf6e3,#fff);border-left:4px solid #c8a24a;border-radius:0 12px 12px 0;padding:12px 16px;margin-bottom:22px;font-size:14px;color:#6f5c46}
 .footer{text-align:center;padding:30px;color:#b8ad9a;font-size:12px}
+
+/* ===== 统一回首页按钮 ===== */
+.home-btn{position:fixed;top:14px;right:14px;z-index:999;background:#4a4034;color:#fff;
+padding:8px 15px;border-radius:22px;font-size:13px;text-decoration:none;
+box-shadow:0 2px 10px rgba(0,0,0,.22);font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;
+transition:background .2s}
+.home-btn:hover{background:#6b5b45}
+.home-btn::before{content:'🗺️ '}
 </style>
 </head>
 <body>
@@ -238,4 +246,5 @@ figure.half + figure.half{margin-left:10px}
 <div class="tcard"><p class="intro">十四天，从金字塔时代到尼罗河两岸，从帝王谷的墓道到卡纳克的柱林——晚机回沪，埃及收官。</p></div></div>
 
 </div>
-<div class="footer">埃及尼罗河之旅 · 十四天全记录 · 按Jess梳理版逐日数字化 · 2026-10-06</div></body></html>
+<div class="footer">埃及尼罗河之旅 · 十四天全记录 · 按Jess梳理版逐日数字化 · 2026-10-06</div><a class="home-btn" href="../">回到我的旅行地图</a>
+</body></html>

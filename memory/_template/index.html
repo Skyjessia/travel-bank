@@ -42,6 +42,14 @@ nav a.on{background:#fff;color:#8a5a1f;border-color:#fff}
 #toast.show{opacity:.95}
 footer{text-align:center;color:var(--sub);font-size:12px;padding:26px 0 34px}
 footer a{color:var(--gold)}
+
+/* ===== 统一回首页按钮 ===== */
+.home-btn{position:fixed;top:14px;right:14px;z-index:999;background:#4a4034;color:#fff;
+padding:8px 15px;border-radius:22px;font-size:13px;text-decoration:none;
+box-shadow:0 2px 10px rgba(0,0,0,.22);font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;
+transition:background .2s}
+.home-btn:hover{background:#6b5b45}
+.home-btn::before{content:'🗺️ '}
 </style>
 </head>
 <body>
@@ -136,5 +144,6 @@ document.querySelectorAll('[contenteditable][data-mk]').forEach(function(el){var
 function copyAll(){var parts=[];document.querySelectorAll('.dblock').forEach(function(b){var label=b.querySelector('.dhead b').textContent;var txt=b.querySelector('[contenteditable]').innerText.trim();parts.push('【'+label+'】\n'+(txt||'（还没写）'));});var txt=parts.join('\n\n');(navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject()).then(function(){toast('全文已复制，发给Leo固化')}).catch(function(){var ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove();toast('全文已复制');});}
 function toast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(function(){t.classList.remove('show')},2200)}
 </script>
+<a class="home-btn" href="../../">回到我的旅行地图</a>
 </body>
 </html>

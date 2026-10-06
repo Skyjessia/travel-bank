@@ -22,6 +22,14 @@ nav a{color:#6f5c46;font-size:14px;text-decoration:none;margin:0 9px}
 .desc{background:#f3ede2;border-radius:10px;padding:14px 18px;font-size:14px;color:#6f5c46;margin-bottom:30px}
 .footer{padding:30px;text-align:center;color:#b8ad9a;font-size:12px}
 @media(max-width:600px){.hero h1{font-size:24px}}
+
+/* ===== 统一回首页按钮 ===== */
+.home-btn{position:fixed;top:14px;right:14px;z-index:999;background:#4a4034;color:#fff;
+padding:8px 15px;border-radius:22px;font-size:13px;text-decoration:none;
+box-shadow:0 2px 10px rgba(0,0,0,.22);font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;
+transition:background .2s}
+.home-btn:hover{background:#6b5b45}
+.home-btn::before{content:'🗺️ '}
 </style></head>
 <body>
 <nav><a href="https://skyjessia.github.io/travel-bank/">← 旅行档案</a><a href="#d1">D1</a><a href="#d3">D3</a><a href="#d4">D4</a><a href="#d5">D5</a><a href="#d8">D8</a><a href="#d9">D9</a><a href="#d10">D10</a></nav>
@@ -30,4 +38,5 @@ nav a{color:#6f5c46;font-size:14px;text-decoration:none;margin:0 9px}
 <div class="wrap">
 <div class="desc">🗃️ 行程档案 · 14天三大宗教圣地线：特拉维夫雅法·海法拿撒勒·约旦安曼佩特拉·死海马萨达·伯利恒·耶路撒冷旧城。</div>
 <div class="day" id="d1"><div class="dhead"><span class="dbadge">D1</span></div><div class="spot"><b>特拉维夫</b><span class="cat">以色列 · 特拉维夫</span><div class="sites">📍 特拉维夫港口 · 📍 拉宾广场 · 📍 包豪斯建筑群 · 📍 雅法老城 · 📍 圣彼得教堂</div><div class="intro">地中海边的不眠城·包豪斯白城</div></div></div><div class="day" id="d3"><div class="dhead"><span class="dbadge">D3</span></div><div class="spot"><b>海法</b><span class="cat">以色列 · 北部区</span><div class="sites">📍 巴哈伊空中花园</div><div class="intro">卡梅尔山上的空中花园</div></div><div class="spot"><b>拿撒勒</b><span class="cat">以色列 · 北部区</span><div class="sites">📍 天使报喜天主教堂</div><div class="intro">报喜之地</div></div></div><div class="day" id="d4"><div class="dhead"><span class="dbadge">D4</span></div><div class="spot"><b>安曼</b><span class="cat">约旦 · 安曼省</span><div class="sites">📍 彩虹街 · 📍 大侯赛因清真寺 · 📍 杰拉什罗马古城</div><div class="intro">七座山丘上的白色之城</div></div></div><div class="day" id="d5"><div class="dhead"><span class="dbadge">D5</span></div><div class="spot"><b>佩特拉</b><span class="cat">约旦 · 马安省</span><div class="sites">📍 卡兹尼神殿 · 📍 蛇道Siq</div><div class="intro">玫瑰色古城·凿岩而建的宝库</div></div></div><div class="day" id="d8"><div class="dhead"><span class="dbadge">D8</span></div><div class="spot"><b>死海</b><span class="cat">以色列 · 犹太山地</span><div class="sites">📍 Ein Gedi Spa海滩 · 📍 马萨达希律王宫殿遗址</div><div class="intro">地球最低点·漂在水面上的下午</div></div></div><div class="day" id="d9"><div class="dhead"><span class="dbadge">D9</span></div><div class="spot"><b>伯利恒</b><span class="cat">巴勒斯坦 · 伯利恒</span><div class="sites">📍 主诞教堂 · 📍 巴以隔离墙</div><div class="intro">隔离墙上的涂鸦与主诞教堂的烛光</div></div></div><div class="day" id="d10"><div class="dhead"><span class="dbadge">D10</span></div><div class="spot"><b>耶路撒冷</b><span class="cat">以色列 · 耶路撒冷</span><div class="sites">📍 雅法门 · 📍 圣殿山 · 📍 大马士革门 · 📍 耶路撒冷旧城 · 📍 抹大拉的玛利亚教堂 · 📍 国会大厦金烛台</div><div class="intro">世界若有十分美，九分在耶路撒冷</div></div></div></div>
-<div class="footer">以色列约旦圣地行 · 行程档案 · Ten-year bank</div></body></html>
+<div class="footer">以色列约旦圣地行 · 行程档案 · Ten-year bank</div><a class="home-btn" href="../">回到我的旅行地图</a>
+</body></html>

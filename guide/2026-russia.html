@@ -24,6 +24,14 @@ nav a{color:#4a5a6b;font-size:13px;text-decoration:none;margin:0 8px}
 .memo{background:#eaf0f4;border-left:3px solid #5a8ab5;padding:10px 14px;border-radius:0 8px 8px 0;font-size:13px;color:#4a5560;margin-top:12px}
 .todo{display:block;background:#fff6dc;border:1px dashed #d4c48a;border-radius:8px;padding:7px 11px;font-size:12px;color:#b8a76a;margin-top:10px}
 .footer{text-align:center;padding:28px;color:#b8ad9a;font-size:12px}
+
+/* ===== 统一回首页按钮 ===== */
+.home-btn{position:fixed;top:14px;right:14px;z-index:999;background:#4a4034;color:#fff;
+padding:8px 15px;border-radius:22px;font-size:13px;text-decoration:none;
+box-shadow:0 2px 10px rgba(0,0,0,.22);font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;
+transition:background .2s}
+.home-btn:hover{background:#6b5b45}
+.home-btn::before{content:'🗺️ '}
 </style></head>
 <body>
 <nav><a href="#d1">D1</a><a href="#d2">D2-4 奥利洪</a><a href="#d5">D5 伊市</a><a href="#d6">D6 转场</a><a href="#d7">D7-9 摩尔曼斯克</a><a href="#d10">D10 归</a></nav>
@@ -65,4 +73,5 @@ nav a{color:#4a5a6b;font-size:13px;text-decoration:none;margin:0 8px}
 <div class="tcard"><p class="intro">一早飞回莫斯科（SVO），19:10起飞，2.11早上8:55落地上海——十天，从-20°C的贝加尔湖到极夜里的绿光。有些旅行回来要缓三天，这场是回来还会笑着抖出雪的。</p></div></div>
 
 </div>
-<div class="footer">俄罗斯蓝冰极光 · 十天全记录 · Ten-year bank · 2026-10-06</div></body></html>
+<div class="footer">俄罗斯蓝冰极光 · 十天全记录 · Ten-year bank · 2026-10-06</div><a class="home-btn" href="../">回到我的旅行地图</a>
+</body></html>

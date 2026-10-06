@@ -28,6 +28,14 @@ figcaption{font-size:12px;color:#a08c6f;margin-top:6px;text-align:center}
 .memo{background:#f3efe4;border-left:3px solid #c8a24a;padding:10px 14px;border-radius:0 8px 8px 0;font-size:13px;color:#5a5245;margin-top:12px}
 .todo{display:block;background:#fff6dc;border:1px dashed #d4c48a;border-radius:8px;padding:8px 12px;font-size:12px;color:#b8a76a;margin-top:12px}
 .footer{text-align:center;padding:30px;color:#b8ad9a;font-size:12px}
+
+/* ===== 统一回首页按钮 ===== */
+.home-btn{position:fixed;top:14px;right:14px;z-index:999;background:#4a4034;color:#fff;
+padding:8px 15px;border-radius:22px;font-size:13px;text-decoration:none;
+box-shadow:0 2px 10px rgba(0,0,0,.22);font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;
+transition:background .2s}
+.home-btn:hover{background:#6b5b45}
+.home-btn::before{content:'🗺️ '}
 </style></head>
 <body>
 <nav><a href="#d1">D1 格凸河</a><a href="#d2">D2 乌蒙</a><a href="#d3">D3 高桥</a><a href="#d4">D4 韭菜坪</a><a href="#d5">D5 野玉海</a><a href="#d6">D6 龙宫·夜郎谷</a></nav>
@@ -102,4 +110,5 @@ figcaption{font-size:12px;color:#a08c6f;margin-top:6px;text-align:center}
 <span class="todo">📷 照片待补：夜郎谷石像阵</span></div></div>
 
 </div>
-<div class="footer">贵州·凉都六盘水避暑行 · 六天全记录 · Ten-year bank · 2026-10-06</div></body></html>
+<div class="footer">贵州·凉都六盘水避暑行 · 六天全记录 · Ten-year bank · 2026-10-06</div><a class="home-btn" href="../">回到我的旅行地图</a>
+</body></html>
