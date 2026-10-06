@@ -4,7 +4,7 @@ TRIP_BANK.push({
     "id": "2017-balkan", "title": "巴尔干与亚得里亚海", "destination": "阿姆斯特丹 · 十六湖 · 扎达尔 · 希贝尼克 · 特罗吉尔 · 斯普利特 · 哈瓦尔 · 杜布罗夫尼克 · 科托尔",
     "country": "克罗地亚", "year": 2017, "startDate": "2017-09-23", "endDate": "2017-10-05",
     "cover": "images/covers/2017-balkan.jpg", "type": "trip", "status": "completed", "memoryStatus": "partial",
-    "description": "13天六人团（Jess·Cyn·燕莹·方冰·张冬妮·Boss）：上海经阿姆斯特丹中转（凡高博物馆）进萨格勒布，租车自驾南下十六湖→扎达尔→希贝尼克→特罗吉尔→斯普利特，船跳哈瓦尔岛，杜布罗夫尼克权游徒步tour，黑山科托尔一日游，夜飞萨格勒布经巴黎回沪。",
+    "description": "13天六人团（Jess·方冰·楼·Cyn一家）：上海经阿姆斯特丹中转（凡高博物馆）进萨格勒布，租车自驾南下十六湖→扎达尔→希贝尼克→特罗吉尔→斯普利特，船跳哈瓦尔岛，杜布罗夫尼克权游徒步tour，黑山科托尔一日游，夜飞萨格勒布经巴黎回沪。",
     "guidePage": "guide/2017-balkan.html", "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2017-balkan/"
 });
 
@@ -33,6 +33,9 @@ PLACE_BANK.push(
     { "tripId": "2017-balkan", "country": "克罗地亚", "region": "斯普利特-达尔马提亚", "city": "哈瓦尔岛", "lat": 43.1728, "lng": 16.4423, "day": 7, "status": "visited",
       "sites": ["西班牙要塞", "哈瓦尔岛广场"],
       "note": "9-29船票100KN/人Split-Hvar·西班牙要塞门票40KN·晚餐@Paradies·宿Apartments Desa Petric·紫薰衣草之岛" },
+    { "tripId": "2017-balkan", "country": "波黑", "region": "黑塞哥维那-涅雷特瓦", "city": "莫斯塔尔", "lat": 43.3438, "lng": 17.8112, "day": 9, "status": "visited",
+      "sites": ["莫斯塔尔古桥", "老城Stari Grad"],
+      "note": "Jess确认到访（杜布三晚期间·老城记忆清晰）·穷游账本无波黑消费故当初漏判·亲历者证词为准·一桥跨两种宗教的古拱桥" },
     { "tripId": "2017-balkan", "country": "克罗地亚", "region": "杜布罗夫尼克-内雷特瓦", "city": "杜布罗夫尼克", "lat": 42.6507, "lng": 18.0944, "day": 8, "status": "visited",
       "sites": ["杜布罗夫尼克古城墙", "派勒城门", "杜布罗夫尼克缆车", "GOT权游徒步tour"],
       "note": "9-30~10-3三晚宿Villa Lucy·GOT walking tour 150KN·君临城广场午餐·亚得里亚海珍珠" },
