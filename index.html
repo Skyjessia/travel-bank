@@ -1321,14 +1321,7 @@ window.filterCardsByYear = function(value){
         buttons.forEach(function(button){
           button.classList.toggle("active", String(button.dataset.value) === String(value));
         });
-        updateStats(value);
-        if(window.filterCardsByYear) window.filterCardsByYear(value);
-        if(value !== "all" && points.length){
-          worldMap.flyToBounds(L.latLngBounds(points).pad(.35), { duration: 1 });
-        } else {
-          worldMap.flyTo([30, 100], 3, { duration: 1 });
-        }
-      }
+     updateStats(value);  if(window.filterCardsByYear) {   window.filterCardsByYear(value); }  if(value !== "all" && points.length) {    worldMap.flyToBounds(     L.latLngBounds(points).pad(.35),     { duration: 1 }   );  } else {    worldMap.fitBounds(     [       [-55, -180],       [75, 180]     ],     {       padding: [10, 10],       duration: 1     }   );  }  
       buttons.forEach(function(button){
         button.addEventListener("click", function(){ selectYear(button.dataset.value); });
       });
