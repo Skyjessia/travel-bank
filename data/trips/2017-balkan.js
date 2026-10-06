@@ -41,5 +41,5 @@ PLACE_BANK.push(
       "note": "9-30~10-3三晚宿Villa Lucy·GOT walking tour 150KN·君临城广场午餐·亚得里亚海珍珠" },
     { "tripId": "2017-balkan", "country": "黑山", "region": "科托尔湾", "city": "科托尔", "lat": 42.4247, "lng": 18.7712, "day": 10, "status": "visited",
       "sites": ["科托尔古城", "科托尔城墙（要塞）"],
-      "note": "10-2黑山一日游·07:00杜布往返·要塞门票3欧实证·峡湾深处的中世纪迷宫" }
+      "note": "10-2黑山一日游·07:00杜布往返·跟团·团费包含Kotor要塞门票（Jess确认）·峡湾深处的中世纪迷宫" }
 );
