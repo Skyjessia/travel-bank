@@ -17,7 +17,7 @@ TRIP_BANK.push({
     "status": "completed",
     "memoryStatus": "none",
     "description": "稻草人8日小团：库车集合，克孜尔千佛洞与天山神秘大峡谷开启独库，巴音布鲁克九曲十八弯，那拉提空中草原，唐布拉百里画廊与孟克特古道，乔尔玛祭英烈，S101返乌鲁木齐。",
-    "guidePage": "",
+    "guidePage": "guide/2024-xinjiang.html",
     "memoryPage": ""
 });
 
