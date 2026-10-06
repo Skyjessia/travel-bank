@@ -6,7 +6,7 @@ TRIP_BANK.push({
     "year": 2019,
     "startDate": "2019-09-28",
     "endDate": "2019-10-13",
-    "cover": "",
+    "cover": "images/covers/2019-newzealand.jpg",
     "type": "trip",
     "status": "completed",
     "memoryStatus": "partial",

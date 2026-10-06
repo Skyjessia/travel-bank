@@ -6,7 +6,7 @@ TRIP_BANK.push({
     "year": 2024,
     "startDate": "2024-02-01",
     "endDate": "2024-02-16",
-    "cover": "",
+    "cover": "images/covers/2024-italy.jpg",
     "type": "trip",
     "status": "completed",
     "memoryStatus": "partial",
