@@ -1,141 +1,229 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>埃及尼罗河之旅 · 神庙全记录</title>
+<title>埃及尼罗河之旅 · 十四天全记录</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:#f7f5f0;color:#333;line-height:1.8}
-nav{position:sticky;top:0;background:#fffdf9;box-shadow:0 1px 8px rgba(0,0,0,.06);padding:10px 16px;text-align:center;z-index:9;white-space:nowrap;overflow-x:auto}
-nav a{color:#6f5c46;font-size:14px;text-decoration:none;margin:0 8px}
-.hero{padding:56px 20px 42px;text-align:center;background:linear-gradient(160deg,#8b7355,#a08c6f);color:#fff}
+nav{position:sticky;top:0;background:#fffdf9;box-shadow:0 1px 8px rgba(0,0,0,.06);padding:10px 14px;text-align:center;z-index:9;white-space:nowrap;overflow-x:auto}
+nav a{color:#6f5c46;font-size:13px;text-decoration:none;margin:0 7px}
+.hero{padding:52px 20px 40px;text-align:center;background:linear-gradient(160deg,#8b7355,#a08c6f);color:#fff}
 .hero h1{font-size:30px;font-weight:500;letter-spacing:3px}
 .hero p{color:rgba(255,255,255,.85);font-size:14px;margin-top:8px}
-.wrap{max-width:780px;margin:0 auto;padding:36px 16px 70px}
-.day{margin-bottom:20px}
-.dhead{margin:38px 0 18px;display:flex;align-items:center;gap:12px}
-.dbadge{background:#8b7355;color:#fff;border-radius:8px;padding:4px 14px;font-size:15px;white-space:nowrap}
+.wrap{max-width:780px;margin:0 auto;padding:30px 16px 70px}
+.day{margin-bottom:14px}
+.dhead{margin:40px 0 16px;display:flex;align-items:center;gap:12px}
+.dbadge{background:#8b7355;color:#fff;border-radius:8px;padding:3px 12px;font-size:14px;font-weight:600;white-space:nowrap}
+.ddate{color:#b8ad9a;font-size:13px}
+.dtitle{font-size:17px;font-weight:600;color:#3a352f}
+.dmeta{font-size:13px;color:#8a7e6a;margin:-8px 0 16px 4px}
 .dline{flex:1;height:1px;background:#d8d2c4}
-.tcard{background:#fff;border-radius:14px;padding:16px 16px 18px;box-shadow:0 4px 18px rgba(0,0,0,.05);margin-bottom:16px}
-.tcard figure{margin:-16px -16px 14px}
-.tcard img{width:100%;border-radius:14px 14px 0 0;display:block}
-.tcard figcaption{padding:8px 16px 0;color:#b8ad9a;font-size:12px;text-align:right}
-.tcard b{color:#3a352f;font-size:18px;font-weight:600}
-.tcard .era{display:inline-block;background:#f3ede2;color:#8b7355;border-radius:6px;padding:2px 9px;font-size:12px;margin-left:8px;vertical-align:2px}
-.tcard p.intro{color:#4a4238;font-size:14.5px;margin-top:10px}
-.memo{background:#f9f4e8;border-left:3px solid #c8a24a;border-radius:0 8px 8px 0;padding:10px 14px;margin-top:12px;color:#6f5c46;font-size:13.5px}
-.memo b{font-size:13px;color:#a08c6f}
-p.tip{background:#f3ede2;border-radius:10px;padding:12px 16px;font-size:14px;color:#6f5c46;margin-bottom:8px}
-.footer{padding:32px;text-align:center;color:#b8ad9a;font-size:12px}
-@media(max-width:600px){.hero h1{font-size:22px}.tcard b{font-size:16px}}
-</style></head>
+.tcard{background:#fffdf9;border:1px solid #e8e2d4;border-radius:14px;padding:20px;margin-bottom:22px;box-shadow:0 2px 10px rgba(90,75,55,.05)}
+.tcard b{font-size:16.5px;color:#3a352f}
+.era{display:inline-block;margin-left:8px;background:#efe8da;color:#8b7355;font-size:11px;border-radius:10px;padding:1px 9px;vertical-align:2px}
+.tcard p.intro{margin-top:9px;font-size:14.5px}
+.memo{margin-top:12px;background:#fdf6e3;border-left:3px solid #c8a24a;border-radius:0 10px 10px 0;padding:10px 14px;font-size:13.5px;color:#6f5c46}
+figure{margin:14px 0 6px}
+figure img{width:100%;border-radius:12px;display:block}
+figcaption{font-size:12px;color:#b8ad9a;text-align:center;margin-top:5px}
+figure.half{display:inline-block;width:calc(50% - 5px);margin:10px 0 6px}
+figure.half + figure.half{margin-left:10px}
+.src{font-size:11px;color:#c0b8a8;text-align:center;margin-top:3px}
+.todo{display:inline-block;margin:8px 0;background:#fff6dc;color:#b8946a;font-size:12.5px;border-radius:10px;padding:3px 12px}
+.sun{background:linear-gradient(90deg,#fdf6e3,#fff);border-left:4px solid #c8a24a;border-radius:0 12px 12px 0;padding:12px 16px;margin-bottom:22px;font-size:14px;color:#6f5c46}
+.footer{text-align:center;padding:30px;color:#b8ad9a;font-size:12px}
+</style>
+</head>
 <body>
-<nav><a href="https://skyjessia.github.io/travel-bank/">← 旅行档案</a><a href="#d1">开罗 D1-4</a><a href="#d5">阿布辛贝</a><a href="#d6">阿斯旺</a><a href="#d10">丹德拉·卢克索</a><a href="#d11">帝王谷·哈布城</a><a href="#d12">卡纳克</a></nav>
-<div class="hero"><h1>埃及尼罗河之旅</h1>
-<p>2025-1-20 ~ 2-2 · 14天 · 三大一小 | 开罗 → 阿布辛贝 → 阿斯旺 → 卢克索</p></div>
+<nav><a href="#d1">D1</a><a href="#d2">D2</a><a href="#d3">D3</a><a href="#d4">D4</a><a href="#d5">D5</a><a href="#d6">D6</a><a href="#d7">D7</a><a href="#d8">D8</a><a href="#d9">D9</a><a href="#d10">D10</a><a href="#d11">D11</a><a href="#d12">D12</a><a href="#d13">D13</a><a href="#d14">D14</a></nav>
+
+<div class="hero"><h1>埃及尼罗河之旅</h1><p>2025.1.20 — 2.2 · 十四天 · 三大一小 · 上海⇄开罗经迪拜</p></div>
+
 <div class="wrap">
 
-<p class="tip">📜 三大一小手排14天：每座神庙都翻过资料、请过向导——这份页面是以后忘了随时回来翻的"神庙词典"。照片全部实拍归档。</p>
+<!-- D1 -->
+<div class="day" id="d1"><div class="dhead"><span class="dbadge">D1</span><span class="ddate">1.20 周一</span><span class="dtitle">上海 → 迪拜 → 开罗</span><div class="dline"></div></div>
+<div class="dmeta">✈️ EK305/EK923 · 🏨 住宿开罗</div>
+<div class="tcard"><p class="intro">三点半机场集合。抵达开罗机场后先去酒店换钱、ATM 取款、打车 —— 落地三件事，参考开罗机场攻略。</p></div></div>
 
-<div class="day" id="d1"><div class="dhead"><span class="dbadge">D1-D4 · 开罗</span><div class="dline"></div></div>
+<!-- D2 -->
+<div class="day" id="d2"><div class="dhead"><span class="dbadge">D2</span><span class="ddate">1.21 周二</span><span class="dtitle">开罗 · 博物馆与尼罗河夜</span><div class="dline"></div></div>
+<div class="dmeta">🏨 金字塔前民宿（非常推荐）</div>
 
-<div class="tcard"><figure><img src="images/covers/2025-egypt.jpg" alt="吉萨金字塔"><figcaption>2025-01-22 · 吉萨</figcaption></figure>
-<b>吉萨大金字塔群 + 狮身人面像</b><span class="era">公元前2600年</span>
-<p class="intro">胡夫、卡夫拉、孟卡拉祖孙三代的三座金字塔，胡夫塔原高146米，是古代世界七大奇迹中<b>唯一现存的</b>。狮身人面像身长73米，面朝正东守望了四千五百年——法老的头，狮子的身。</p>
-<div class="memo"><b>她的记忆：</b>住的民宿就在金字塔前，推开窗就是胡夫塔。"非常推荐"——行程表原话。</div></div>
+<div class="tcard"><b>埃及国家博物馆</b><span class="era">1858年建馆 · 11万件馆藏</span>
+<p class="intro">粉红色外墙下压着五千年——图坦卡蒙展厅的黄金面具（11公斤黄金浇铸）、皇家木乃伊厅、纳尔迈调色板。展品多到"像在仓库里看文物"，<b>请了向导完全不一样</b>，每件都讲得活。</p>
+<div class="memo"><b>她的记忆：</b>早上去了埃及国家博物馆，请了向导，非常值得的体验。</div>
+<span class="todo">📷 照片待补：黄金面具 / 展厅内景</span></div>
 
-<div class="tcard"><b>埃及国家博物馆</b><span class="era">1858年开馆</span>
-<p class="intro">馆藏11万件，两层的百年老馆，展品多到堆在过道里。镇馆之宝是图坦卡蒙的黄金面具——11公斤纯黄金，3300年前一位18岁就死了的小法老，因为墓没被盗过，成了埃及最富有的死者。皇家木乃伊厅里躺着拉美西斯二世本人。</p>
-<div class="memo"><b>她的记忆：</b>专门请了向导讲解，"非常值得"——两小时的讲解把展品讲活。</div></div>
+<div class="tcard"><b>尼罗河游船夜景</b><span class="era">开罗段</span>
+<p class="intro">夜游尼罗河，看整个开罗亮灯——河岸线是这座城市最温柔的轮廓。</p>
+<div class="memo"><b>她的记忆：</b>晚上尼罗河游船，看整个尼罗河夜景。船上和埃及伙伴一起跳舞 哈哈哈 🎶</div>
+<span class="todo">📷 照片待补：游船夜景</span></div>
 
-<div class="tcard"><b>尼罗河游船夜</b><span class="era">开罗</span>
-<p class="intro">开罗段的尼罗河夜游，船上乐队现场演奏，两岸灯火是这座两千万人口巨型城市的日常。</p>
-<div class="memo"><b>她的记忆：</b>船上和埃及伙伴一起跳舞，哈哈哈——行程表原话，那天是1月21日。</div></div>
+<div class="tcard"><b>金字塔前民宿</b><span class="era">住宿推荐</span>
+<p class="intro">打开窗就是金字塔——住在吉萨村落里，早晚的光都从金字塔后面来。</p>
+<div class="memo"><b>她的记忆：</b>入住在金字塔前的民宿，非常推荐。</div></div></div>
 
-<div class="tcard"><b>萨拉丁城堡 + 默罕默德阿里大清真寺</b><span class="era">1176年 / 1848年</span>
-<p class="intro">萨拉丁为抵御十字军而建的山顶要塞，统治开罗700年。城堡里的默罕默德阿里清真寺通体用雪花石膏，被叫作"雪花石清真寺"，庭院里能俯瞰整个开罗——天气好时能看到金字塔。</p></div>
+<!-- D3 -->
+<div class="day" id="d3"><div class="dhead"><span class="dbadge">D3</span><span class="ddate">1.22 周三</span><span class="dtitle">开罗 · 金字塔日</span><div class="dline"></div></div>
+<div class="dmeta">🏨 住开罗</div>
 
-<div class="tcard"><b>哈利利市集</b><span class="era">1382年开市</span>
-<p class="intro">中东最大的老市集，600多年历史，铜灯、香料、纸莎草画和银器挤满蜿蜒的小巷，当年丝绸之路商队的终点之一。</p></div>
+<div class="tcard"><b>吉萨大金字塔群 + 狮身人面像</b><span class="era">公元前2600年 · 世界七大奇迹唯一现存</span>
+<p class="intro">胡夫金字塔原高146米，四千年来一直是地球上最高的人造物。旁边卡夫拉、孟卡拉两座一字排开，再往前狮身人面像守望了4500年——早上去看，沙漠还很凉，塔影拉得最长。</p>
+<div class="memo"><b>她的记忆：</b>早上：吉萨大金字塔群，狮身人面像。</div>
+<figure><img src="guide/2025-egypt/assets/giza-panorama.jpg" alt="吉萨金字塔群全景"><figcaption>吉萨金字塔群全景 · 九座金字塔同框</figcaption><div class="src">图：Wikimedia Commons · CC BY-SA（作者 Francisco Anzola）</div></figure>
+<span class="todo">📷 照片待补：狮身人面像正面 / 你拍的塔下视角</span></div>
 
-<div class="tcard"><b>洞穴教堂（圣西蒙教堂）· 垃圾城</b><span class="era">开罗</span>
-<p class="intro">莫卡塔姆山脚下的"垃圾城"是科普特基督教拾荒者社区，一万人在这里分拣全开罗的垃圾。山崖里凿出了全中东最大的教堂——圣西蒙洞穴教堂，能坐两万人，岩壁就是墙，天空就是顶。</p></div>
+<div class="tcard"><b>萨拉丁城堡 + 默罕默德阿里大清真寺</b><span class="era">1176年建堡 · 雪花石清真寺</span>
+<p class="intro">12世纪萨拉丁抗十字军的要塞，城堡最高处是19世纪的默罕默德阿里清真寺——整座用雪花石膏砌成，开罗人叫它"雪花石清真寺"，院子里能俯瞰整座开罗。</p>
+<div class="memo"><b>她的记忆：</b>下午：萨拉丁城堡+默罕默德阿里大清真寺。</div>
+<span class="todo">📷 照片待补：城堡全景 / 清真寺庭院</span></div>
 
-<div class="tcard"><b>埃及民俗博物馆</b><span class="era">开罗</span>
-<p class="intro">法老木乃伊与民间生活的陈列馆，1月23日参观完，当晚就在拉美西斯车站上火车——开罗到阿斯旺，夜宿卧铺，沿尼罗河一路向南。</p></div></div>
+<div class="tcard"><b>哈利利市集</b><span class="era">1382年开市 · 中东最大巴扎</span>
+<p class="intro">六百多年的老市场——铜灯、香料、纸莎草画、银器，巷子窄到两人错身都要侧肩，砍价是入场券。</p>
+<div class="memo"><b>她的记忆：</b>晚上：哈利利市集。</div>
+<span class="todo">📷 照片待补：市集巷道</span></div></div>
 
-<div class="day" id="d5"><div class="dhead"><span class="dbadge">D5-D6 · 阿布辛贝</span><div class="dline"></div></div>
+<!-- D4 -->
+<div class="day" id="d4"><div class="dhead"><span class="dbadge">D4</span><span class="ddate">1.23 周四</span><span class="dtitle">开罗 · 老城与夜火车</span><div class="dline"></div></div>
+<div class="dmeta">🚂 夜宿火车（开罗 → 阿斯旺）</div>
 
-<div class="tcard"><b>拉美西斯二世大神庙</b><span class="era">公元前1264年</span>
-<p class="intro">四座22米高的拉美西斯二世坐像从整面山体里凿出，镇守纳赛尔湖畔3300年。最神的是"太阳节奇迹"：每年2月21日和10月21日，阳光会穿过60米深的洞窟，直射进内殿照亮神像——埃及人把日子算得比钟表还准。60年代建阿斯旺大坝会淹掉它，联合国发起史上最大规模文物搬迁，整座山被切成两千多块原样重建。</p>
-<div class="memo"><b>她的记忆：</b>1月24日从阿斯旺包车，抵达时已是夜里，宿在神庙门口——第二天一早，拉美西斯就站在湖边等你。</div></div>
+<div class="tcard"><b>洞穴教堂 + 垃圾城市</b><span class="era">莫卡塔姆山</span>
+<p class="intro">圣西蒙洞穴教堂凿在整块山岩里，能坐下两万人——它所在的"垃圾城"是科普特拾荒者社区，他们回收了开罗大半的垃圾，也建出了中东最大的洞穴教堂。 contradiction 与奇迹长在一起的地方。</p>
+<div class="memo"><b>她的记忆：</b>早上火车站买票，洞穴教堂，垃圾城市。</div>
+<span class="todo">📷 照片待补：洞穴教堂内部</span></div>
 
-<div class="tcard"><b>奈菲尔塔利小神庙</b><span class="era">公元前1264年</span>
-<p class="intro">拉美西斯二世为爱妻奈菲尔塔利建的庙，六座巨像里有两座是王后本人——和王王同尺寸，这在埃及史上是第一次。"奈菲尔塔利"意为"最美的女人"，庙门上的铭文写着他如何爱她。被称为全世界最浪漫的世界遗产。</p></div></div>
+<div class="tcard"><b>埃及民俗博物馆 · 法老木乃伊</b><span class="era">皇家木乃伊厅</span>
+<p class="intro">隔着玻璃看三千多岁的法老本人——拉美西斯二世、哈特谢普苏特，睫毛还在。</p>
+<div class="memo"><b>她的记忆：</b>埃及民俗博物馆有看法老木乃伊。</div></div>
 
-<div class="day" id="d6"><div class="dhead"><span class="dbadge">D6-D8 · 阿斯旺</span><div class="dline"></div></div>
+<div class="tcard"><b>夜火车去阿斯旺</b><span class="era">约13小时</span>
+<p class="intro">晚上从拉美西斯火车站上车，睡一晚，醒来就到尼罗河上游。</p>
+<div class="memo"><b>她的记忆：</b>晚上去火车去阿斯旺。</div></div></div>
 
-<div class="tcard"><b>尼罗河三角帆船 Felucca</b><span class="era">阿斯旺</span>
-<p class="intro">三千年不变的白帆小船，风一鼓就贴着水面走。傍晚的阿斯旺段是全尼罗河最温柔的水面——花岗岩小岛、棕榈和努比亚人的彩色房子一路铺过去。</p></div>
+<!-- D5 -->
+<div class="day" id="d5"><div class="dhead"><span class="dbadge">D5</span><span class="ddate">1.24 周五</span><span class="dtitle">开罗 → 阿斯旺 → 阿布辛贝</span><div class="dline"></div></div>
+<div class="dmeta">🚗 包车 · 🏨 住宿阿布辛贝</div>
+<div class="tcard"><p class="intro">早上到达阿斯旺，直接包车往南 280 公里，穿过撒哈拉边缘——到阿布辛贝的时候已经是晚上了。为的就是明天一早的巨像。</p></div></div>
 
-<div class="tcard"><b>未完成的方尖碑</b><span class="era">哈特谢普苏特时代</span>
-<p class="intro">躺在采石场里的 unfinished obelisk：42米长、1100吨，如果立起来将是埃及最高的方尖碑——开采到一半岩石裂了，三千年前就报废在这里。整座碑就是古埃及的采石现场教学：看他们怎么用木楔子和铜凿从整块花岗岩里"切"出方尖碑。</p></div>
+<!-- D6 -->
+<div class="day" id="d6"><div class="dhead"><span class="dbadge">D6</span><span class="ddate">1.25 周六</span><span class="dtitle">阿布辛贝 → 阿斯旺</span><div class="dline"></div></div>
+<div class="dmeta">🚗 包车 · 🏨 住宿阿斯旺</div>
 
-<div class="tcard"><figure><img src="guide/2025-egypt/assets/nubia-village.jpg" alt="努比亚村落"><figcaption>2025-01-27 · 努比亚村落</figcaption></figure>
-<b>努比亚村落</b><span class="era">阿斯旺</span>
-<p class="intro">尼罗河西岸的努比亚人村庄，房子刷成沙漠色的彩绘世界——努比亚人是法老时代的古老血脉，有自己的语言和文字。</p>
-<div class="memo"><b>她的记忆：</b>壁画墙前站了半天——墙上画着白头巾的努比亚长者，日期1月27日。</div></div>
+<div class="tcard"><b>拉美西斯二世大神庙</b><span class="era">公元前1264年 · 22米四巨像</span>
+<p class="intro">四座22米高的拉美西斯二世坐像从山体里凿出，3,200年过去膝盖依然齐整。每年2月21日和10月21日，太阳光会穿过65米深的洞窟直射内殿神像——"太阳节奇迹"。1964年因为建阿斯旺大坝，整座神庙被切割成千余块搬上山，连太阳节都算准了复刻——人类抢救自己文明最浪漫的一次。</p>
+<div class="memo"><b>她的记忆：</b>一早去拉美西斯二世大神庙——凌晨出发的沙漠，值得。</div>
+<span class="todo">📷 照片待补：四巨像正面 / 内殿（你在这站了多久？）</span></div>
 
-<div class="tcard"><figure><img src="guide/2025-egypt/assets/philea-kiosk.jpg" alt="菲莱神庙·图拉真亭"><figcaption>2025-01-27 · 菲莱神庙 · 图拉真亭</figcaption></figure><figure style="margin-top:10px"><img src="guide/2025-egypt/assets/philea-front.jpg" alt="图拉真亭正面"><figcaption>图拉真亭正面 · 哈索尔柱头</figcaption></figure>
-<b>菲莱神庙</b><span class="era">公元前380年 · 托勒密时代</span>
-<p class="intro">伊西斯女神的主神庙，建在尼罗河中央的岛上，坐船才能进。罗马人来了也续建——图拉真亭就是罗马皇帝留下的"烂尾楼"，14根哈索尔柱头的开放式亭子，是全菲莱上镜率最高的建筑。70年代阿斯旺大坝蓄水，整座神庙被拆成4万多块搬到隔壁的高岛上——全埃及最难搬的家。</p>
-<div class="memo"><b>她的记忆：</b>1月27日包车一日游，中午和黄昏各拍了一轮——图拉真亭的哈索尔柱头认了两次。</div></div>
+<div class="tcard"><b>奈菲尔塔利小神庙</b><span class="era">给王后的庙 · 历史首次同尺寸</span>
+<p class="intro">隔壁100米是拉美西斯二世为王后奈菲尔塔利建的小神庙——六座10米巨像，其中两座是王后本人，和法老<b>一样高</b>——这是埃及历史上王后第一次和法老平起平坐。门楣上刻着"太阳为她照耀"。</p>
+<div class="memo"><b>她的记忆：</b>和奈菲尔塔利小神庙。</div>
+<span class="todo">📷 照片待补：王后巨像</span></div>
 
-<div class="tcard"><b>费里亚尔花园（老瀑布酒店）</b><span class="era">阿斯旺</span>
-<p class="intro">尼罗河边的维多利亚式老酒店——阿加莎·克里斯蒂就在这里写出了《尼罗河上的惨案》。酒店花园的小公园是看尼罗河日落的最好位置。</p>
-<div class="memo"><b>她的记忆：</b>1月27日傍晚在这里看日落——书里那场惨案发生的地方，其实安静得很。</div></div></div>
+<div class="tcard"><b>尼罗河三角帆船</b><span class="era">Felucca · 三千年不变</span>
+<p class="intro">傍晚回到阿斯旺，白帆三角船收风收得刚刚好——努比亚船工的三千年手艺。</p>
+<div class="memo"><b>她的记忆：</b>下午去阿斯旺，傍晚体验尼罗河三角帆船。</div>
+<span class="todo">📷 照片待补：帆船剪影</span></div></div>
 
-<div class="day" id="d9"><div class="dhead"><span class="dbadge">D9 · 尼罗河游轮</span><div class="dline"></div></div>
+<!-- D7 -->
+<div class="day" id="d7"><div class="dhead"><span class="dbadge">D7</span><span class="ddate">1.26 周日</span><span class="dtitle">阿斯旺 · 采石场与努比亚</span><div class="dline"></div></div>
+<div class="dmeta">🏨 住阿斯旺</div>
 
-<div class="tcard"><b>游轮北上：阿斯旺 → 卢克索</b><span class="era">1月28日</span>
-<p class="intro">尼罗河阿斯旺-卢克索段，坐船北上——两岸绿洲与沙漠的分界线在船舷两侧缓缓移动。阿斯旺是努比亚的世界，卢克索是底比斯的核心，中间这一段河，是古埃及的"高速公路"。</p></div></div>
+<div class="tcard"><b>未完成的方尖碑</b><span class="era">哈特谢普苏特时代 · 42米/1100吨</span>
+<p class="intro">一座正在开采时裂掉的方尖碑，永远躺在花岗岩采石场里——如果完工它将是埃及最大的方尖碑。正因为它躺着，才让后人看清了古埃及人<b>怎么从整座山里凿出纪念碑</b>：木楔泡水撑裂，全部靠人力。</p>
+<div class="memo"><b>她的记忆：</b>未完成的方尖碑（采石场）。</div>
+<span class="todo">📷 照片待补：方尖碑全身</span></div>
 
-<div class="day" id="d10"><div class="dhead"><span class="dbadge">D10 · 丹德拉 &amp; 卢克索神庙</span><div class="dline"></div></div>
+<div class="tcard"><b>努比亚村落</b><span class="era">法老时代的血脉</span>
+<p class="intro">努比亚人比法老更古老——彩色房子、鳄鱼标本挂门口、骆驼代步。你拍到的那面壁画墙就在村里。</p>
+<div class="memo"><b>她的记忆：</b>努比亚村落。</div>
+<figure><img src="guide/2025-egypt/assets/nubia-village.jpg" alt="努比亚村落壁画墙"><figcaption>2025-01-27 · 努比亚村落 · 壁画墙</figcaption></figure></div></div>
 
-<div class="tcard"><figure><img src="guide/2025-egypt/assets/dendera-facade.jpg" alt="丹德拉神庙立面"><figcaption>2025-01-29 · 丹德拉哈索尔神庙正面</figcaption></figure>
-<figure style="margin-top:10px"><img src="guide/2025-egypt/assets/dendera-ceiling.jpg" alt="丹德拉彩绘天花板"><figcaption>⭐ 丹德拉的天空 · 蓝底金星彩绘天花板</figcaption></figure>
-<figure style="margin-top:10px"><img src="guide/2025-egypt/assets/dendera-ruins.jpg" alt="丹德拉围墙内"><figcaption>围墙内的附属建筑区</figcaption></figure>
-<b>丹德拉神庙</b><span class="era">公元前1世纪 · 托勒密时代</span>
-<p class="intro">哈索尔女神（爱与美之神，牛耳人脸）的主庙，古埃及<b>保存最完好</b>的神庙——顶还挂着、色还在。丹德拉以天花板彩绘闻名：深蓝底色上金星铺成"丹德拉的天空"，努特女神弯身护着太阳圆盘。它是托勒密王朝最后的辉煌，等罗马人接手时，法老时代已经落幕。</p>
-<div class="memo"><b>她的记忆：</b>1月29日上午包车北上60公里。三张照片：围墙里的残柱、蓝底金星的天花板、哈索尔柱立面——"丹德拉的天空"是全埃及最值钱的一张照片。</div></div>
+<!-- D8 -->
+<div class="day" id="d8"><div class="dhead"><span class="dbadge">D8</span><span class="ddate">1.27 周一</span><span class="dtitle">阿斯旺 · 菲莱与日落</span><div class="dline"></div></div>
+<div class="dmeta">🚗 包车一日游 · 🏨 住阿斯旺</div>
 
-<div class="tcard"><figure><img src="guide/2025-egypt/assets/luxor-ramses.jpg" alt="卢克索神庙·拉美西斯二世坐像"><figcaption>2025-01-29 黄昏 · 卢克索神庙</figcaption></figure>
-<b>卢克索神庙</b><span class="era">公元前1400年起</span>
-<p class="intro">底比斯的"南行圣舟"目的地——每年奥佩特节，阿蒙神像从两公里外的卡纳克顺尼罗河抬过来住一个月。门口六尊拉美西斯二世坐像，头上戴的是上下埃及双冠，膝盖之间站着奈菲尔塔莉小像。黄昏时分打上暖灯，是全卢克索最上镜的三十分钟。</p>
-<div class="memo"><b>她的记忆：</b>1月29日下午从丹德拉赶回来，赶上了黄昏的光。</div></div></div>
+<div class="tcard"><b>菲莱神庙</b><span class="era">托勒密时代 · 伊西斯女神主庙</span>
+<p class="intro">供奉伊西斯（众神之后）的神庙，原在菲莱岛——阿斯旺大坝蓄水后<b>整座庙搬到了阿吉勒基亚岛</b>（和阿布辛贝同一批拯救工程）。图拉真亭是罗马皇帝留下的"烂尾"凉亭，哈索尔柱头亭式结构，是全庙最上镜的角落。</p>
+<div class="memo"><b>她的记忆：</b>菲莱神庙+酒店边上的费里亚尔花园小公园看日落（尼罗河惨案的酒店）-包车一日游。</div>
+<figure><img src="guide/2025-egypt/assets/philea-kiosk.jpg" alt="菲莱图拉真亭"><figcaption>2025-01-27 · 菲莱神庙 · 图拉真亭</figcaption></figure>
+<figure><img src="guide/2025-egypt/assets/philea-front.jpg" alt="图拉真亭正面"><figcaption>图拉真亭正面 · 哈索尔柱头</figcaption></figure></div>
 
-<div class="day" id="d11"><div class="dhead"><span class="dbadge">D11 · 帝王谷 &amp; 哈布城</span><div class="dline"></div></div>
+<div class="tcard"><b>费里亚尔花园 · 尼罗河惨案酒店</b><span class="era">老瀑布酒店 · 阿加莎书里那座</span>
+<p class="intro">酒店旁边的小公园正对尼罗河第一瀑布群——阿加莎·克里斯蒂写《尼罗河上的惨案》就住的老瀑布酒店。日落时分整个河面变成金色。</p>
+<div class="memo"><b>她的记忆：</b>晚上逛市场买了香水。</div>
+<span class="todo">📷 照片待补：日落河景 / 香水（买到了什么味道？）</span></div></div>
 
-<div class="tcard"><figure><img src="guide/2025-egypt/assets/valley-tomb.jpg" alt="帝王谷墓道"><figcaption>2025-01-30 · 帝王谷墓道</figcaption></figure><figure style="margin-top:10px"><img src="guide/2025-egypt/assets/valley-paint.jpg" alt="墓道彩绘"><figcaption>墓道灰泥彩绘 · 眼镜蛇与安卡</figcaption></figure>
-<b>帝王谷</b><span class="era">新王国时期 · 公元前1550年起</span>
-<p class="intro">新王国的法老们不再建金字塔（太招贼），改把墓藏进底比斯西岸的山谷里——至今发现64座墓。墓道往山体深处斜插上百米，两壁和天花板布满灰泥彩绘：《洞窟之书》《门之书》里太阳神夜航冥界的全过程。最著名的KV62图坦卡蒙墓就是在这里被霍华德·卡特挖开的。</p>
-<div class="memo"><b>她的记忆：</b>1月30日上午进的墓——阶梯越走越深，翼女神在门楣上展翅，眼镜蛇和安卡还保持着两千年的颜色。</div></div>
+<!-- D9 -->
+<div class="day" id="d9"><div class="dhead"><span class="dbadge">D9</span><span class="ddate">1.28 周二</span><span class="dtitle">阿斯旺 → 卢克索 · 不走高速</span><div class="dline"></div></div>
+<div class="dmeta">🚗 自驾一日（沿尼罗河乡村线） · 🏨 住卢克索酒店</div>
+<div class="tcard"><p class="intro"><b>不走高速，开了一整天</b>——沿尼罗河东岸穿村庄、甘蔗田和市集，傍晚才到卢克索。晚上卢克索神庙附近吃饭+逛了夜市。这天没有景点，只有河。</p>
+<div class="memo"><b>她的记忆：</b>阿斯旺到卢克索，不走高速，我们开了一天，下午到达卢克索酒店。晚上卢克索神庙附近吃饭+逛了夜市。</div>
+<span class="todo">📷 照片待补：尼罗河沿途村庄</span></div></div>
 
-<div class="tcard"><figure><img src="guide/2025-egypt/assets/habu-gate.jpg" alt="哈布城第一塔门"><figcaption>2025-01-30 · 哈布城第一塔门</figcaption></figure><figure style="margin-top:10px"><img src="guide/2025-egypt/assets/habu-relief.jpg" alt="法老击敌浮雕"><figcaption>法老击敌浮雕特写</figcaption></figure>
-<b>哈布城（Medinet Habu）</b><span class="era">公元前1186年 · 拉美西斯三世</span>
-<p class="intro">拉美西斯三世的葬祭庙，外围一圈围墙让它看着像座城——"哈布城"的名字就是这么来的。第一塔门高25米，上面的"法老击敌图"是全埃及最清晰的——法老抓着俘虏的头发挥起权杖。整座庙的彩绘保存程度全埃及第一，站在庭院里还能看见红、蓝、黄三千年前的原色。供奉主神：阿蒙·拉——太阳神。</p>
-<div class="memo"><b>她的记忆：</b>"河对岸一座古城，里面有个神庙供奉太阳神"——2026年10月记忆找回，就是这里。</div></div></div>
+<!-- D10 -->
+<div class="day" id="d10"><div class="dhead"><span class="dbadge">D10</span><span class="ddate">1.29 周三</span><span class="dtitle">卢克索 · 丹德拉 + 卢克索神庙</span><div class="dline"></div></div>
+<div class="dmeta">🚗 包车 · 🏨 住卢克索酒店</div>
 
-<div class="day" id="d12"><div class="dhead"><span class="dbadge">D12 · 卡纳克</span><div class="dline"></div></div>
+<div class="tcard"><b>丹德拉神庙</b><span class="era">托勒密-罗马时代 · 哈索尔女神</span>
+<p class="intro">卢克索以北60公里，供奉爱与美之女神哈索尔——<b>全埃及保存最完好的神庙</b>：屋顶还完整、彩绘还是原色。天花板就是著名的"丹德拉的天空"——深蓝底金星，围着天空女神努特；柱头全是哈索尔的脸（牛耳女神）。这座庙两千年前用完，两千年后灯一开还是那个颜色。</p>
+<div class="memo"><b>她的记忆：</b>包车去看丹德拉神庙+卢克索神庙（晚上到）。</div>
+<figure><img src="guide/2025-egypt/assets/dendera-facade.jpg" alt="丹德拉神庙立面"><figcaption>2025-01-29 · 丹德拉哈索尔神庙正面</figcaption></figure>
+<figure><img src="guide/2025-egypt/assets/dendera-ceiling.jpg" alt="丹德拉彩绘天花板"><figcaption>⭐ 丹德拉的天空 · 蓝底金星彩绘天花板</figcaption></figure>
+<figure><img src="guide/2025-egypt/assets/dendera-ruins.jpg" alt="丹德拉围墙内"><figcaption>围墙内的附属建筑区</figcaption></figure></div>
 
-<div class="tcard"><figure><img src="guide/2025-egypt/assets/karnak-hall.jpg" alt="卡纳克大多柱厅"><figcaption>2025-01-31 · 卡纳克大多柱厅</figcaption></figure>
-<b>卡纳克神庙 · 大多柱厅</b><span class="era">公元前2055年起 · 修建2000年</span>
+<div class="tcard"><b>卢克索神庙</b><span class="era">公元前1400年 · 阿蒙神"南行圣舟"的目的地</span>
+<p class="intro">神庙门口那尊<b>戴双冠的拉美西斯二世坐像</b>——膝上还站着王后奈菲尔塔莉的小像。古埃及新年，阿蒙神乘圣舟从三公里外的卡纳克顺流"南巡"来这里探亲——卢克索神庙是神的"行宫"。黄昏金色光打在巨像上最出片。</p>
+<div class="memo"><b>她的记忆：</b>晚上到卢克索神庙。</div>
+<figure><img src="guide/2025-egypt/assets/luxor-ramses.jpg" alt="拉美西斯二世双冠坐像"><figcaption>2025-01-29 黄昏 · 拉美西斯二世双冠坐像（膝上是王后小像）</figcaption></figure>
+<span class="todo">📷 照片待补：方尖碑（另一根在巴黎协和广场）</span></div></div>
+
+<!-- D11 -->
+<div class="day" id="d11"><div class="dhead"><span class="dbadge">D11</span><span class="ddate">1.30 周四</span><span class="dtitle">卢克索西岸 · 帝王谷 + 哈布城</span><div class="dline"></div></div>
+<div class="dmeta">🚗 一日游 · 🏨 住卢克索酒店</div>
+<div class="sun">🌅 <b>连续两天（D11-D12）尼罗河边上晚餐看夕阳</b> —— 卢克索最奢侈的固定节目</div>
+
+<div class="tcard"><b>帝王谷</b><span class="era">新王国 · 64座王陵</span>
+<p class="intro">新王国法老怕金字塔太招眼被盗，把墓全藏进了这片荒山的谷里——图坦卡蒙（KV62）就是1922年在这里被霍华德·卡特挖出来的。墓道深几十米，两壁和天花板铺满灰泥彩绘：<b>翼女神玛特、眼镜蛇女神与安卡</b>，颜色像昨天刚画。</p>
+<div class="memo"><b>她的记忆：</b>帝王谷一日游。</div>
+<figure><img src="guide/2025-egypt/assets/valley-tomb.jpg" alt="帝王谷墓道"><figcaption>2025-01-30 · 帝王谷墓道</figcaption></figure>
+<figure><img src="guide/2025-egypt/assets/valley-paint.jpg" alt="墓道彩绘"><figcaption>墓道灰泥彩绘 · 眼镜蛇与安卡</figcaption></figure>
+<span class="todo">📷 照片待补：帝王谷山谷外观</span></div>
+
+<div class="tcard"><b>哈布城</b><span class="era">拉美西斯三世葬祭庙 · 公元前1150年</span>
+<p class="intro">卢克索西岸最大的神庙建筑群——外围真有一圈城墙，当地人就叫它"哈布城"。第一塔门上<b>法老抓着俘虏头发挥棒</b>的浮雕是全埃及保存最完整的"击敌图"，内墙彩绘的原色（红黄蓝）依然在。主神是太阳神阿蒙·拉——"河对岸一座供奉太阳神的古城"，就是这里。</p>
+<div class="memo"><b>她的记忆：</b>哈布城 · 连续两天尼罗河边上晚餐看夕阳。</div>
+<figure><img src="guide/2025-egypt/assets/habu-gate.jpg" alt="哈布城第一塔门"><figcaption>2025-01-30 · 哈布城第一塔门</figcaption></figure>
+<figure><img src="guide/2025-egypt/assets/habu-relief.jpg" alt="法老击敌浮雕"><figcaption>法老击敌浮雕特写</figcaption></figure></div></div>
+
+<!-- D12 -->
+<div class="day" id="d12"><div class="dhead"><span class="dbadge">D12</span><span class="ddate">1.31 周五</span><span class="dtitle">卢克索 · 卡纳克</span><div class="dline"></div></div>
+<div class="dmeta">🏨 住卢克索酒店</div>
+<div class="sun">🌅 <b>尼罗河边上晚餐看夕阳 · 第二天</b></div>
+
+<div class="tcard"><b>卡纳克神庙 · 大多柱厅</b><span class="era">公元前2055年起 · 修建2000年</span>
 <p class="intro">人类历史上建过的<b>最大宗教建筑群</b>——从公元前2000年到托勒密时代，三十多位法老不停加盖了两千年。大多柱厅里134根纸莎草巨柱，中央12根高23米，一根柱子要十几个人才能合抱。柱身密密麻麻的浮雕里能找到每个法老的"朋友圈"——打了什么仗、拜了什么神、跟谁分权。</p>
-<div class="memo"><b>她的记忆：</b>1月31日，行程表上写的"丹德兰神庙"其实一整个下午都泡在卡纳克——照片里的"11"号柱还站在原地。</div></div></div>
+<div class="memo"><b>她的记忆：</b>1月31日，行程表上写的"丹德兰神庙"其实一整个下午都泡在卡纳克——照片里的"11"号柱还站在原地。</div>
+<figure><img src="guide/2025-egypt/assets/karnak-hall.jpg" alt="卡纳克大多柱厅"><figcaption>2025-01-31 · 卡纳克大多柱厅</figcaption></figure>
+<span class="todo">📷 照片待补：方尖碑 / 圣羊大道</span></div></div>
 
-<div class="day" id="d14"><div class="dhead"><span class="dbadge">D14 · 归程</span><div class="dline"></div></div>
+<!-- D13 -->
+<div class="day" id="d13"><div class="dhead"><span class="dbadge">D13</span><span class="ddate">2.1 周六</span><span class="dtitle">卢克索 ✈ 开罗 · 新城一日</span><div class="dline"></div></div>
+<div class="dmeta">✈️ 卢克索飞开罗</div>
 
-<div class="tcard"><b>2月2日 · 卢克索 ✈ 开罗 → 上海</b>
-<p class="intro">早上从卢克索飞回开罗，新开罗区 city walk 走了一日，晚上登机回沪——十四天，从金字塔时代到尼罗河两岸，三千年的神庙之旅收官。</p></div></div>
+<div class="tcard"><b>悬空教堂 + 汗·哈利利大巴扎</b><span class="era">老开罗科普特区</span>
+<p class="intro">悬空教堂建在罗马城门废墟上、"悬"在走道上方3米——圣母马利亚教堂，木梁屋顶像诺亚方舟。出来再钻一次汗·哈利利，白天的巴扎和晚上是两个世界。</p>
+<div class="memo"><b>她的记忆：</b>早上从卢克索飞机到开罗+悬空教堂（汗·哈利利大巴扎）。</div>
+<span class="todo">📷 照片待补：悬空教堂木顶</span></div>
+
+<div class="tcard"><b>新开罗区 + 扎马利克岛</b><span class="era">Gezira岛北部</span>
+<p class="intro">尼罗河中的扎马利克岛是开罗最洋气的一角——开罗塔、现代艺术博物馆、使馆区林荫道。city walk 走到日落，十四天收口。</p>
+<div class="memo"><b>她的记忆：</b>新开罗区 city walk 一日游，扎马利克岛（Gezira岛北部）。</div>
+<span class="todo">📷 照片待补：扎马利克岛 / 开罗塔</span></div></div>
+
+<!-- D14 -->
+<div class="day" id="d14"><div class="dhead"><span class="dbadge">D14</span><span class="ddate">2.2 周日</span><span class="dtitle">开罗 → 上海</span><div class="dline"></div></div>
+<div class="tcard"><p class="intro">十四天，从金字塔时代到尼罗河两岸，从帝王谷的墓道到卡纳克的柱林——晚机回沪，埃及收官。</p></div></div>
 
 </div>
-<div class="footer">埃及尼罗河之旅 · 神庙全记录 · Ten-year bank · 2026-10-06 数字化</div></body></html>
+<div class="footer">埃及尼罗河之旅 · 十四天全记录 · 按Jess梳理版逐日数字化 · 2026-10-06</div></body></html>
