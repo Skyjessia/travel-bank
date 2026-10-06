@@ -13,7 +13,7 @@ TRIP_BANK.push({
     "status": "completed",
     "memoryStatus": "none",
     "description": "稻稻8日布恩山小环线：加德满都集合，翠苏里白水漂流入博卡拉，Tadapani-Ghorepani三天山屋徒步，博卡拉自由活动与瑜伽修整，猴庙收队。",
-    "guidePage": "",
+    "guidePage": "guide/2023-nepal.html",
     "memoryPage": ""
 });
 
