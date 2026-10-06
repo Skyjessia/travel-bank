@@ -808,6 +808,7 @@ a {
 <script src="data/trips/2019-newzealand.js"></script>
 <script src="data/trips/2019-tokyo.js"></script>
 <script src="data/trips/2015-uk.js"></script>
+<script src="data/wishlist.js"></script>
 <script src="data/trips/2018-setouchi.js"></script>
 <script src="data/trips/2024-xinjiang.js"></script>
 <script src="data/trips/2021-shangrila.js"></script>
@@ -1322,6 +1323,31 @@ window.filterCardsByYear = function(value){
     ".city-label span{display:block;transform:translateY(-14px)}"
   ].join("");
   document.head.appendChild(labelStyle);
+
+  /* ===== 想去清单 · 金色脉冲层（2026-10-06） ===== */
+  var wishLayer = L.layerGroup();
+  (typeof WISH_BANK !== "undefined" ? WISH_BANK : []).forEach(function(w){
+    var m = L.marker([w.lat, w.lng], {
+      icon: L.divIcon({className:"wish-wrap", html:"<div class=\"wish-pulse\"><div class=\"wish-dot\"></div></div><div class=\"wish-label\">"+w.name+"</div>", iconSize:null}),
+      interactive:true
+    });
+    if(w.note) m.bindTooltip(w.name + " · " + w.note, {direction:"top", offset:[0,-10], className:"wish-tip"});
+    wishLayer.addLayer(m);
+  });
+  wishLayer.addTo(worldMap);
+  var wishCss = document.createElement("style");
+  wishCss.textContent = [
+    ".wish-pulse{width:12px;height:12px;transform:translate(-50%,-50%)}",
+    ".wish-dot{width:9px;height:9px;border-radius:50%;background:#c8a24a;",
+    "  box-shadow:0 0 0 0 rgba(200,162,74,.75);animation:wishPulse 2.6s infinite}",
+    "@keyframes wishPulse{0%{box-shadow:0 0 0 0 rgba(200,162,74,.65)}",
+    "  70%{box-shadow:0 0 0 16px rgba(200,162,74,0)}100%{box-shadow:0 0 0 0 rgba(200,162,74,0)}}",
+    ".wish-label{font-size:11px;color:rgba(255,250,240,.5);white-space:nowrap;",
+    "  text-shadow:0 0 4px rgba(0,0,0,.95);transform:translate(-50%,8px);",
+    "  pointer-events:none;font-family:-apple-system,'PingFang SC',sans-serif}",
+    ".wish-tip{background:#2f2a24;color:#e8dcc8;border:1px solid #c8a24a;"
+  ].join("");
+  document.head.appendChild(wishCss);
 
     var groupedTrips = {};
     safePlaces.forEach(function(place){
