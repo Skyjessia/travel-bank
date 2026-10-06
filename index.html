@@ -653,18 +653,6 @@ a {
   color:rgba(255,255,255,.85);font-size:14px;transition:opacity .5s ease;}
 .map-loading.hide{opacity:0;pointer-events:none;}
 
-
-/* ===== 年表索引（全部足迹模式） ===== */
-#yearIndex{display:none;}
-#yearIndex.on{display:block;}
-.year-row{margin-bottom:26px;}
-.year-row .yr-head{display:flex;align-items:center;gap:12px;margin-bottom:6px;}
-.year-row .yr-year{font-size:24px;font-weight:500;color:#3a352f;letter-spacing:1px;}
-.year-row .yr-line{flex:1;height:1px;background:#d8d2c4;}
-.year-row .yr-count{font-size:13px;color:#b8ad9a;}
-.year-row .yr-dest{font-size:15px;color:#555;}
-.year-row .yr-dest span{margin-right:14px;white-space:nowrap;}
-
 </style>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
@@ -756,11 +744,9 @@ a {
             新增旅行见 data/bank.js 顶部 SOP
         -->
 
-        <div id="yearIndex"></div>
         <div
             class="trip-grid"
             id="tripGrid"
-            style="display:none;"
         ></div>
 
     </section>
@@ -808,6 +794,7 @@ a {
 <script src="data/trips/2019-tokyo.js"></script>
 <script src="data/trips/2015-uk.js"></script>
 <script src="data/trips/2018-setouchi.js"></script>
+<script src="data/trips/2024-xinjiang.js"></script>
 
 
 <!-- ========================================
@@ -1085,59 +1072,9 @@ else {
 }
 
 
-
-/* ===== 年表索引（全部足迹模式） ===== */
-
-var FLAG = {
-  "中国":"🇨🇳","日本":"🇯🇵","俄罗斯":"🇷🇺","意大利":"🇮🇹","梵蒂冈":"🇻🇦",
-  "埃及":"🇪🇬","阿联酋":"🇦🇪","新西兰":"🇳🇿","荷兰":"🇳🇱","克罗地亚":"🇭🇷",
-  "波黑":"🇧🇦","黑山":"🇲🇪","以色列":"🇮🇱","巴勒斯坦":"🇵🇸","约旦":"🇯🇴","英国":"🇬🇧"
-};
-
-function renderYearIndex(){
-  var byYear = {};
-  TRIP_BANK.forEach(function(t){
-    if(!byYear[t.year]) byYear[t.year] = [];
-    byYear[t.year].push(t);
-  });
-  var years = Object.keys(byYear).sort(function(a,b){ return b - a; });
-  var html = '<div style="font-size:19px;font-weight:600;color:#3a352f;margin-bottom:22px;">我的旅行人生</div>' +
-             '<div style="height:1px;background:#3a352f;margin-bottom:26px;"></div>';
-  years.forEach(function(y){
-    var trips = byYear[y];
-    var dests = [];
-    trips.forEach(function(t){
-      var flag = FLAG[t.country] || "🌍";
-      var name = t.country === "中国" ? t.destination : t.country;
-      var item = flag + " " + name;
-      if(dests.indexOf(item) < 0) dests.push(item);
-    });
-    html += '<div class="year-row">' +
-      '<div class="yr-head"><span class="yr-year">' + y + '</span>' +
-      '<span class="yr-line"></span>' +
-      '<span class="yr-count">' + trips.length + ' 次旅行</span></div>' +
-      '<div class="yr-dest"><span>' + dests.join('</span><span>') + '</span></div>' +
-      '</div>';
-  });
-  var el = document.getElementById("yearIndex");
-  el.innerHTML = html;
-}
-
-renderYearIndex();
-
-function showYearIndex(show){
-  var yi = document.getElementById("yearIndex");
-  var tg = document.getElementById("tripGrid");
-  if(yi) yi.className = show ? "on" : "";
-  if(tg) tg.style.display = show ? "none" : "";
-}
-
-
 /* 年份联动：地图按钮 → 卡片同步过滤 */
 
 window.filterCardsByYear = function(value){
-
-    showYearIndex(value === "all");
 
     var children = tripGrid.children;
 
