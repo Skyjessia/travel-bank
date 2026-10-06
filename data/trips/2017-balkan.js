@@ -35,11 +35,11 @@ PLACE_BANK.push(
       "note": "9-29船票100KN/人Split-Hvar·西班牙要塞门票40KN·晚餐@Paradies·宿Apartments Desa Petric·紫薰衣草之岛" },
     { "tripId": "2017-balkan", "country": "波黑", "region": "黑塞哥维那-涅雷特瓦", "city": "莫斯塔尔", "lat": 43.3438, "lng": 17.8112, "day": 9, "status": "visited",
       "sites": ["莫斯塔尔古桥", "老城Stari Grad"],
-      "note": "Jess确认到访（杜布三晚期间·老城记忆清晰）·穷游账本无波黑消费故当初漏判·亲历者证词为准·一桥跨两种宗教的古拱桥" },
+      "note": "Jess确认到访·非黑山一日游（该团纯黑山境内不进波黑）·系杜布三晚期间自行前往·账本无波黑消费故当初漏判·亲历者证词为准·一桥跨两种宗教的古拱桥" },
     { "tripId": "2017-balkan", "country": "克罗地亚", "region": "杜布罗夫尼克-内雷特瓦", "city": "杜布罗夫尼克", "lat": 42.6507, "lng": 18.0944, "day": 8, "status": "visited",
       "sites": ["杜布罗夫尼克古城墙", "派勒城门", "杜布罗夫尼克缆车", "GOT权游徒步tour"],
       "note": "9-30~10-3三晚宿Villa Lucy·GOT walking tour 150KN·君临城广场午餐·亚得里亚海珍珠" },
     { "tripId": "2017-balkan", "country": "黑山", "region": "科托尔湾", "city": "科托尔", "lat": 42.4247, "lng": 18.7712, "day": 10, "status": "visited",
       "sites": ["科托尔古城", "科托尔城墙（要塞）"],
-      "note": "10-2黑山一日游·07:00杜布往返·跟团·团费包含Kotor要塞门票（Jess确认）·峡湾深处的中世纪迷宫" }
+      "note": "10-2黑山一日游·07:00杜布往返·跟团·团费包含Kotor要塞门票（Jess确认）·线路纯黑山境内（科托尔老城+佩拉斯特+布德瓦一带）·峡湾深处的中世纪迷宫" }
 );
