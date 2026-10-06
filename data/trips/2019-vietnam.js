@@ -10,9 +10,9 @@ TRIP_BANK.push({
     "endDate": "",
     "cover": "images/covers/2019-vietnam.jpg",
     "type": "trip",
-    "status": "completed",
+    "status": "pending",
     "memoryStatus": "none",
-    "description": "松林高山湖畔的合影之旅：彩色小船、绿摩托与草帽五人组（2019年10月中·城市与具体日期待补）。",
+    "description": "松林高山湖畔的合影之旅：彩色小船、绿摩托与草帽五人组。唯一锚点：2019-10-18 19:14傍晚（文件名时间戳）。待Jess翻旧资料确认城市与日期。",
     "guidePage": "",
     "memoryPage": ""
 });
