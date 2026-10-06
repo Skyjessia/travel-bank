@@ -1,7 +1,7 @@
 TRIP_BANK.push({
     "id": "2018-holyland", "title": "以色列约旦圣地行", "destination": "特拉维夫 · 海法 · 耶路撒冷 · 安曼 · 佩特拉 · 死海",
     "country": "以色列", "year": 2018, "startDate": "2018-02-06", "endDate": "2018-02-19",
-    "cover": "", "type": "trip", "status": "completed", "memoryStatus": "none",
+    "cover": "images/covers/2018-holyland.jpg", "type": "trip", "status": "completed", "memoryStatus": "none",
     "description": "14天三大宗教圣地线：特拉维夫雅法·海法拿撒勒·约旦安曼佩特拉·死海马萨达·伯利恒·耶路撒冷旧城。",
     "guidePage": "guide/2018-holyland.html", "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2018-holyland/", "places": ["特拉维夫", "北部区", "耶路撒冷", "安曼", "马安", "伯利恒"]
 });

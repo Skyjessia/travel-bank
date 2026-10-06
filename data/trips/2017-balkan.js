@@ -1,7 +1,7 @@
 TRIP_BANK.push({
     "id": "2017-balkan", "title": "巴尔干与亚得里亚海", "destination": "阿姆斯特丹 · 十六湖 · 扎达尔 · 斯普利特 · 莫斯塔尔 · 杜布罗夫尼克 · 科托尔",
     "country": "克罗地亚", "year": 2017, "startDate": "2017-09-23", "endDate": "2017-10-05",
-    "cover": "", "type": "trip", "status": "completed", "memoryStatus": "none",
+    "cover": "images/covers/2017-balkan.jpg", "type": "trip", "status": "completed", "memoryStatus": "none",
     "description": "13天申根签多国线：荷兰阿姆斯特丹→克罗地亚十六湖/扎达尔/斯普利特/杜布罗夫尼克→波黑莫斯塔尔→黑山科托尔。",
     "guidePage": "guide/2017-balkan.html", "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2017-balkan/", "places": ["北荷兰", "利卡-塞尼", "滨海-达尔马提亚", "杜布罗夫尼克-内雷特瓦", "科托尔湾"]
 });

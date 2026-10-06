@@ -1,7 +1,7 @@
 TRIP_BANK.push({
     "id": "2018-setouchi", "title": "濑户内海跳岛", "destination": "仓敷 · 直岛 · 丰岛 · 高松", "country": "日本",
     "year": 2018, "startDate": "2018-06-26", "endDate": "2018-07-01",
-    "cover": "", "type": "trip", "status": "completed", "memoryStatus": "partial",
+    "cover": "images/covers/2018-setouchi.jpg", "type": "trip", "status": "completed", "memoryStatus": "partial",
     "description": "艺术跳岛6天：仓敷美观·直岛草间弥生黄南瓜·地中美术馆·丰岛美术馆·心脏音资料馆·高松。",
     "guidePage": "guide/2018-setouchi.html", "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2018-setouchi/", "places": ["冈山", "香川"]
 });
