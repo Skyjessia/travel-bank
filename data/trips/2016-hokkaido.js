@@ -6,7 +6,7 @@ TRIP_BANK.push({
     "year": 2016,
     "startDate": "2016-10-03",
     "endDate": "2016-10-12",
-    "cover": "",
+    "cover": "images/covers/2016-hokkaido.jpg",
     "type": "trip",
     "status": "completed",
     "memoryStatus": "partial",
@@ -18,7 +18,7 @@ TRIP_BANK.push({
 
 PLACE_BANK.push(
     { "tripId": "2016-hokkaido", "country": "日本", "region": "北海道", "city": "旭川", "lat": 43.7708, "lng": 142.3650, "day": 1, "status": "visited", "sites": ["常磐公园摩天轮", "旭桥", "旭山动物园"], "note": "落地第一站，摩天轮上看五彩的旭川" },
-    { "tripId": "2016-hokkaido", "country": "日本", "region": "北海道", "city": "阿寒湖", "lat": 43.5569, "lng": 144.1079, "day": 2, "status": "visited", "sites": ["摩周湖", "硫磺山", "阿寒湖", "阿寒湖爱奴村落", "球藻节"], "note": "摩周湖的雾和爱奴的传说" },
+    { "tripId": "2016-hokkaido", "country": "日本", "region": "北海道", "city": "阿寒湖", "lat": 43.5569, "lng": 144.1079, "day": 2, "status": "visited", "sites": ["摩周湖", "硫磺山", "阿寒湖", "阿寒湖爱奴村落", "球藻节"], "note": "摩周湖的雾和爱奴的传说·游船码头红桩栈桥打卡" },
     { "tripId": "2016-hokkaido", "country": "日本", "region": "北海道", "city": "美瑛", "lat": 43.6794, "lng": 142.4550, "day": 4, "status": "visited", "sites": ["青池", "拼布之路", "七星之树", "北西之丘展望公园"], "note": "青池的蓝，是相机拍不出的蓝" },
     { "tripId": "2016-hokkaido", "country": "日本", "region": "北海道", "city": "富良野", "lat": 43.3536, "lng": 142.3847, "day": 4, "status": "visited", "sites": ["亲子之树", "四季彩之丘", "哲学之树", "拓真馆", "风之花园", "富田农场", "森之时计咖啡馆"], "note": "拼布之路的田野起伏" },
     { "tripId": "2016-hokkaido", "country": "日本", "region": "北海道", "city": "函馆", "lat": 41.7687, "lng": 140.7288, "day": 5, "status": "visited", "sites": ["五稜郭公园", "八幡坂", "金森红砖仓库", "元町", "函馆山夜景", "Lucky Pierrot"], "note": "千万美金夜景，本尊比照片震撼" },
