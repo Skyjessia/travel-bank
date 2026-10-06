@@ -6,7 +6,7 @@ TRIP_BANK.push({
     "year": 2025,
     "startDate": "2025-01-20",
     "endDate": "2025-02-07",
-    "cover": "",
+    "cover": "images/covers/2025-egypt.jpg",
     "type": "trip",
     "status": "completed",
     "memoryStatus": "partial",

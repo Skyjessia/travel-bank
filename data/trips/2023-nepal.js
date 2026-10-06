@@ -8,7 +8,7 @@ TRIP_BANK.push({
     "year": 2023,
     "startDate": "2023-10-14",
     "endDate": "2023-10-21",
-    "cover": "",
+    "cover": "images/covers/2023-nepal.jpg",
     "type": "trip",
     "status": "completed",
     "memoryStatus": "none",

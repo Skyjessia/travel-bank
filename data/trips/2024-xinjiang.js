@@ -12,7 +12,7 @@ TRIP_BANK.push({
     "year": 2024,
     "startDate": "2024-08-17",
     "endDate": "2024-08-24",
-    "cover": "",
+    "cover": "images/covers/2024-xinjiang.jpg",
     "type": "trip",
     "status": "completed",
     "memoryStatus": "none",
