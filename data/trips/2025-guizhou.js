@@ -8,7 +8,7 @@ TRIP_BANK.push({
     "year": 2025,
     "startDate": "2025-08-14",
     "endDate": "2025-08-19",
-    "cover": "",
+    "cover": "images/covers/2025-guizhou.jpg",
     "type": "trip",
     "status": "completed",
     "memoryStatus": "partial",
@@ -43,7 +43,7 @@ PLACE_BANK.push({
     "city": "韭菜坪", "lat": 26.8680, "lng": 104.6940, "day": 4,
     "status": "visited",
     "sites": ["阿西里西韭菜坪（云上花海）"],
-    "note": "8-17·赫章县·贵州最高峰2900米·8月野生韭菜花海正盛"
+    "note": "8-17·赫章县·贵州最高峰2900米·8月野生韭菜花海正盛·山顶风电场·与长辈同行（照片实证）"
 });
 PLACE_BANK.push({
     "tripId": "2025-guizhou", "country": "中国", "region": "六盘水市",
