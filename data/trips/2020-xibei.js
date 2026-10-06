@@ -41,152 +41,92 @@ PLACE_BANK.push(
     "day": 1,
     "status": "visited",
     "sites": [
-        "塔尔寺",
         "日月山"
-    ]
-}
-);
-
-PLACE_BANK.push(
-{
-    "id": "gonghe",
-    "tripId": "2020-xibei",
-    "country": "中国",
-    "region": "青海",
-    "city": "共和",
-    "lat": 36.2864,
-    "lng": 100.6183,
-    "day": 2,
-    "status": "visited",
-    "sites": [
-        "青海湖"
-    ]
-}
-);
-
-PLACE_BANK.push(
-{
-    "id": "wulan",
-    "tripId": "2020-xibei",
-    "country": "中国",
-    "region": "青海",
-    "city": "乌兰",
-    "lat": 36.9297,
-    "lng": 98.4798,
-    "day": 3,
-    "status": "visited",
-    "sites": [
-        "茶卡盐湖"
     ],
-    "note": "天空之镜·环线2号站点"
+    "note": "D1·8-25·塔尔寺因疫情闭馆改道日月山·八月的青海湖湛蓝辽阔"
+}
+);
+
+
+PLACE_BANK.push(
+{
+    "id": "gonghe", "tripId": "2020-xibei", "country": "中国", "region": "青海",
+    "city": "共和", "lat": 36.2864, "lng": 100.6183, "day": 1, "status": "visited",
+    "sites": ["青海湖"], "note": "D1·8-25·草甸环绕湛蓝湖面·高原独有的辽阔"
 }
 );
 
 PLACE_BANK.push(
 {
-    "id": "delingha",
-    "tripId": "2020-xibei",
-    "country": "中国",
-    "region": "青海",
-    "city": "德令哈",
-    "lat": 37.3694,
-    "lng": 97.3711,
-    "day": 3,
-    "status": "visited"
+    "id": "wulan", "tripId": "2020-xibei", "country": "中国", "region": "青海",
+    "city": "乌兰", "lat": 36.9297, "lng": 98.4798, "day": 2, "status": "visited",
+    "sites": ["茶卡盐湖"], "note": "D2·8-26·盐晶化作镜面倒映云天·天空之镜"
 }
 );
 
 PLACE_BANK.push(
 {
-    "id": "dafaidan",
-    "tripId": "2020-xibei",
-    "country": "中国",
-    "region": "青海",
-    "city": "大柴旦",
-    "lat": 37.8583,
-    "lng": 95.3578,
-    "day": 3,
-    "status": "visited",
-    "sites": [
-        "翡翠湖",
-        "乌素特水上雅丹",
-        "可鲁克湖"
-    ]
+    "id": "delingha", "tripId": "2020-xibei", "country": "中国", "region": "青海",
+    "city": "德令哈", "lat": 37.3694, "lng": 97.3711, "day": 2, "status": "passed",
+    "sites": [], "note": "D2·途经诗歌小城德令哈短暂补给"
 }
 );
 
 PLACE_BANK.push(
 {
-    "id": "mangya",
-    "tripId": "2020-xibei",
-    "country": "中国",
-    "region": "青海",
-    "city": "茫崖",
-    "lat": 38.2528,
-    "lng": 90.8565,
-    "day": 3,
-    "status": "visited",
-    "sites": [
-        "艾肯泉·恶魔之眼",
-        "水上公路（双色湖）",
-        "茫崖翡翠湖",
-        "艾肯泉（恶魔之眼）",
-        "俄博梁雅丹",
-        "冷湖",
-        "阿克赛"
-    ]
+    "id": "dafaidan", "tripId": "2020-xibei", "country": "中国", "region": "青海",
+    "city": "大柴旦", "lat": 37.8583, "lng": 95.3578, "day": 2, "status": "visited",
+    "sites": ["大柴旦翡翠湖"], "note": "D2傍晚·薄荷绿矿湖错落·2020年尚保留原始静谧"
 }
 );
 
 PLACE_BANK.push(
 {
-    "id": "dunhuang",
-    "tripId": "2020-xibei",
-    "country": "中国",
-    "region": "甘肃",
-    "city": "敦煌",
-    "lat": 40.1421,
-    "lng": 94.6619,
-    "day": 8,
-    "status": "visited",
-    "sites": [
-        "鸣沙山月牙泉",
-        "又见敦煌",
-        "莫高窟",
-        "鸣沙山月牙泉"
-    ]
+    "id": "shuishang-yadan", "tripId": "2020-xibei", "country": "中国", "region": "青海",
+    "city": "水上雅丹", "lat": 37.6440, "lng": 93.2600, "day": 3, "status": "visited",
+    "sites": ["青海雅丹", "G315 U型公路", "东台吉乃尔湖（蒂芙尼蓝）", "乌素特水上雅丹", "无色湖", "西台双色湖", "房车基地星空"],
+    "note": "D3·8-27·柴达木腹地大穿越·夜宿水上雅丹房车基地——苍茫无人区以房车为家·整段旅途最具记忆点的独特体验"
 }
 );
 
 PLACE_BANK.push(
 {
-    "id": "jiayuguan",
-    "tripId": "2020-xibei",
-    "country": "中国",
-    "region": "甘肃",
-    "city": "嘉峪关",
-    "lat": 39.7589,
-    "lng": 98.2896,
-    "day": 8,
-    "status": "passed",
-    "note": "留白·只在记忆里——车过未留影的缺憾美·环线4号站点·环线5号站点（翡翠湖）·环线9-16号站点·茫崖-冷湖段多日连穿（确切天数待行程表）·环线17-18号站点·瓜州途经·环线19号站点"
+    "id": "mangya", "tripId": "2020-xibei", "country": "中国", "region": "青海",
+    "city": "茫崖", "lat": 38.2530, "lng": 90.8540, "day": 4, "status": "visited",
+    "sites": ["艾肯泉（恶魔之眼）"], "note": "D4·8-28·G315向西经冷湖区域直达茫崖·瞳孔般环形纹路·诡谲而充满力量"
 }
 );
 
 PLACE_BANK.push(
 {
-    "id": "zhangye",
-    "tripId": "2020-xibei",
-    "country": "中国",
-    "region": "甘肃",
-    "city": "张掖",
-    "lat": 38.9259,
-    "lng": 100.4496,
-    "day": 9,
-    "status": "visited",
-    "sites": ["七彩丹霞", "山丹军马场", "祁连", "门源", "227国道",
-        "嘉峪关关城"
-    ],
-    "note": "Day9特种兵900km翻越祁连山·环线⑳-㉓号站点·经227国道返西宁"
+    "id": "eboliang", "tripId": "2020-xibei", "country": "中国", "region": "青海",
+    "city": "俄博梁 · 冷湖", "lat": 38.7000, "lng": 93.1000, "day": 5, "status": "visited",
+    "sites": ["俄博梁雅丹（火星腹地越野）", "越野摩托", "冷湖火星基地"],
+    "note": "D5·8-29·越野摩托驰骋火星谷地·万千雅丹绵延至地平线·茫崖翡翠湖恰逢大雨遗憾错过"
+}
+);
+
+PLACE_BANK.push(
+{
+    "id": "dunhuang", "tripId": "2020-xibei", "country": "中国", "region": "甘肃",
+    "city": "敦煌", "lat": 40.1420, "lng": 94.6620, "day": 6, "status": "visited",
+    "sites": ["阿克塞石油小镇（九层妖塔怪兽巴士）", "阳关", "鸣沙山沙漠基地", "莫高窟"],
+    "note": "D6-D7·8-30/31·废土风戈壁废墟·阳关大道·鸣沙山驼铃日落·莫高窟千年壁画·长途自驾夜抵张掖"
+}
+);
+
+PLACE_BANK.push(
+{
+    "id": "zhangye", "tripId": "2020-xibei", "country": "中国", "region": "甘肃",
+    "city": "张掖", "lat": 38.9250, "lng": 100.4490, "day": 8, "status": "visited",
+    "sites": ["七彩丹霞日落"], "note": "D8·9-1·抵张掖直奔丹霞日落"
+}
+);
+
+PLACE_BANK.push(
+{
+    "id": "menyuan", "tripId": "2020-xibei", "country": "中国", "region": "青海",
+    "city": "门源 · 祁连", "lat": 37.3800, "lng": 101.6200, "day": 9, "status": "visited",
+    "sites": ["山丹军马场", "227国道", "祁连", "门源"], "note": "D9·9-2·227最美国道翻越祁连山·完成漫长环线回到西宁"
 }
 );
