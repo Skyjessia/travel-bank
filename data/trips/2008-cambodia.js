@@ -13,7 +13,7 @@ TRIP_BANK.push({
     "status": "completed",
     "memoryStatus": "partial",
     "description": "六日跟团（小牧·Cynthia·Jessia）：飞抵金边逛夜市，王宫银佛塔独立纪念碑与吐斯廉屠杀博物馆读高棉近代史，长途大巴至暹粒，巴肯山守吴哥日落，小吴哥寺巴戎寺塔普伦寺听王朝兴衰，洞里萨湖水上浮村与崩密列废墟，暹粒采购归国。",
-    "guidePage": "",
+    "guidePage": "guide/2008-cambodia.html",
     "memoryPage": ""
 });
 

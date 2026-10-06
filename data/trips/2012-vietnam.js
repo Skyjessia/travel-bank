@@ -13,7 +13,7 @@ TRIP_BANK.push({
     "status": "completed",
     "memoryStatus": "partial",
     "description": "12天纵贯越南：上海飞胡志明直转河内，还剑湖与水上木偶戏开篇，夜火车南下岘港，会安灯笼古街与日本廊桥，芽庄中转，大叻山城松林步道与疯狂石头屋，美奈白沙丘日出仙女溪，西贡中央邮局收官。与小牧、Cyn同行。",
-    "guidePage": "",
+    "guidePage": "guide/2019-vietnam.html",
     "memoryPage": ""
 });
 
