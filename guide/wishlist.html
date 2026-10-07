@@ -54,14 +54,15 @@ body{background:linear-gradient(180deg,#141210,#1f1b16 60%,#141210)}
 <div class="tcard" style="background:rgba(47,42,36,.55);border-color:rgba(200,162,74,.3)">
 <b style="color:#f0e6d2">五大洲 × 四大洋 · 点亮进度</b>
 <div style="margin-top:14px">
-<div class="bar-row"><span class="lb">七大洲</span><div class="bar-wrap"><div class="bar" style="width:57%"></div></div><span class="pc">4 / 7</span></div>
-<div class="bar-row"><span class="lb">四大洋</span><div class="bar-wrap"><div class="bar" style="width:100%;background:linear-gradient(90deg,#c8a24a,#e8c878)"></div></div><span class="pc">4 / 4 ✅</span></div>
+<div class="bar-row"><span class="lb">七大洲</span><div class="bar-wrap"><div class="bar" id="contBar" style="width:57%"></div></div><span class="pc" id="contPc">4 / 7</span></div>
+<div class="bar-row"><span class="lb">四大洋</span><div class="bar-wrap"><div class="bar" id="oceanBar" style="width:100%;background:linear-gradient(90deg,#c8a24a,#e8c878)"></div></div><span class="pc" id="oceanPc">4 / 4 ✅</span></div>
 <div class="bar-row"><span class="lb">大家伙</span><div class="bar-wrap"><div class="bar" id="dynBar" style="width:0%"></div></div><span class="pc" id="dynPc">0 / 9</span></div>
 </div>
-<p style="font-size:12px;color:#8a7e6a;margin-top:10px">已点亮：亚洲 · 欧洲 · 非洲 · 大洋洲 ｜ 北冰洋（捷里别尔卡）· 太平洋 · 大西洋水系（地中海）· 印度洋（普吉岛·安达曼海）<br>待点亮：北美洲 · 南美洲 · 南极洲</p>
+<p style="font-size:12px;color:#8a7e6a;margin-top:10px" id="progressDetail">已点亮：数据加载中…</p>
 </div>
 <div style="margin:34px 0 6px"><span class="dot" style="width:10px;height:10px;border-radius:50%;background:#c8a24a;display:inline-block;margin-right:8px"></span><b style="font-size:18px;color:#f0e6d2;letter-spacing:2px">九个大家伙 · 待点亮</b></div>
 <div class="wish-grid" id="wishGrid"></div>
+<script src="../data/progress.js"></script>
 <script src="../data/wishlist.js"></script>
 <script>
 (function(){
