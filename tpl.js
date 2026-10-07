@@ -5,6 +5,12 @@
    填好两块数据 → index.html 加一行 script 引用
    （详见 data/bank.js 顶部SOP）
 
+   ★ 页面模板两类（10/7 Jess定稿）★
+   · 常规游记风景类 → memory/_template/template-scenic.html
+     （标准=北疆格式：行程+感受）
+   · 文化深度类 → memory/_template/template-culture.html
+     （深度介绍+自己的感悟：埃及/意大利/山西/Holyland/巴尔干）
+
    必填最小集（30秒门槛）：
    · trip：year / title / destination / type / memoryStatus
    · 每个 place：tripId / country / region / city / lat / lng / status

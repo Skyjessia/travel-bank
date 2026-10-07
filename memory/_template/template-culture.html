@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
+  ════════════════════════════════════════════
+  文化深度类模板 · template-culture
+  适用：埃及 / 意大利 / 山西 / Holyland / 巴尔干
+  特点：北疆骨架 + 每站两段（📖深度介绍 + 💭她的感悟）
+  用法：复制本文件 → guide/YYYY-目的地.html → 替换内容
+        照片用 <figure>，没图先留 <span class="todo">
+  ════════════════════════════════════════════
+-->
+<title>文化深度类模板</title>
+<style>*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:#f7f5f0;color:#333;line-height:1.8}
+nav{position:sticky;top:0;background:#fffdf9;box-shadow:0 1px 8px rgba(0,0,0,.06);padding:10px 14px;text-align:center;z-index:9;white-space:nowrap;overflow-x:auto}
+nav a{color:#6f5c46;font-size:13px;text-decoration:none;margin:0 7px}
+.hero{padding:50px 20px 38px;text-align:center;background:linear-gradient(160deg,#6b4a3a,#8a6552);color:#fff}
+.hero h1{font-size:28px;font-weight:500;letter-spacing:3px}
+.hero p{color:rgba(255,255,255,.85);font-size:14px;margin-top:8px}
+.hero .ctype{display:inline-block;margin-top:12px;padding:3px 14px;border:1px solid rgba(255,255,255,.6);border-radius:20px;font-size:12px;letter-spacing:2px}
+.wrap{max-width:780px;margin:0 auto;padding:28px 16px 70px}
+.dhead{margin:36px 0 14px;display:flex;align-items:center;gap:12px}
+.dbadge{background:#6b4a3a;color:#fff;border-radius:8px;padding:2px 10px;font-size:13px;font-weight:600}
+.ddate{color:#8a7e6a;font-size:13px}
+.dtitle{font-size:16px;font-weight:600;color:#3a352f}
+.dline{flex:1;height:1px;background:#d8d2c4}
+.dmeta{font-size:13px;color:#8a7e6a;margin:8px 0}
+.tcard{background:#fffdf9;border:1px solid #ece6d8;border-radius:14px;padding:16px 18px;margin-bottom:16px;box-shadow:0 1px 6px rgba(74,64,52,.05)}
+.tcard>b{font-size:15px;color:#3a352f}
+.era{font-size:12px;color:#a08c6f;margin-left:10px}
+.intro{font-size:14px;color:#555;margin-top:6px}
+.deep{background:#f6f1e6;border-left:3px solid #8a6552;padding:12px 15px;border-radius:0 8px 8px 0;font-size:14px;color:#4a4238;margin-top:12px}
+.deep b.lbl{display:block;font-size:12px;color:#8a6552;letter-spacing:2px;margin-bottom:6px}
+.deep p{margin-bottom:8px}
+.deep p:last-child{margin-bottom:0}
+figure{margin:12px 0}
+figure img{width:100%;max-height:480px;object-fit:cover;border-radius:10px;display:block}
+figcaption{font-size:12px;color:#a08c6f;margin-top:6px;text-align:center}
+.memo{background:#f3efe4;border-left:3px solid #c8a24a;padding:9px 13px;border-radius:0 8px 8px 0;font-size:13px;color:#5a5245;margin-top:12px}
+.insight{background:linear-gradient(135deg,#fbf5e4,#f6ecd2);border:1.5px solid #d9c48a;border-radius:12px;padding:12px 15px;font-size:14px;color:#6a5a34;margin-top:12px;font-style:italic}
+.insight b.lbl{display:block;font-size:12px;color:#a08c3f;letter-spacing:2px;margin-bottom:6px;font-style:normal;font-weight:bold}
+.todo{display:block;background:#fff6dc;border:1px dashed #d4c48a;border-radius:8px;padding:7px 11px;font-size:12px;color:#b8a76a;margin-top:10px}
+.footer{text-align:center;padding:28px;color:#b8ad9a;font-size:12px}
+.home-btn{position:fixed;top:14px;right:14px;z-index:999;background:#4a4034;color:#fff;padding:8px 15px;border-radius:22px;font-size:13px;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.22)}
+.home-btn:hover{background:#6b5b45}
+.home-btn::before{content:'🗺️ '}
+</style></head>
+<body>
+<nav><a href="#d1">D1</a><a href="#d2">D2</a><a href="#d3">D3</a></nav>
+<div class="hero"><h1>目的地 · 行程名</h1><p>YYYY.MM.DD — MM.DD · N天 · 团名/自由行</p><span class="ctype">🏛️ 文化深度类</span></div>
+<div class="wrap">
+
+<div class="dhead" id="d1"><span class="dbadge">D1</span><span class="ddate">M.DD</span><span class="dtitle">当日主题</span><div class="dline"></div></div><div class="dmeta">🚗 交通 · 宿地</div>
+<div class="tcard"><b>地点名</b><span class="era">行政区 · 海拔/年代 · 一句标签</span>
+<p class="intro">一句话定位这个地点（它是什么、为什么值得停）。</p>
+<div class="deep"><b class="lbl">📖 深度介绍</b>
+<p>历史文化叙事——写它的来历、格局、人物、细节。示范见下（王家大院）：</p>
+<p>王家大院，是一个晋商百年的家族史。山西人最爱家，在外赚了钱，就想着回家盖房、娶妻、生子，壮大家族。院落分老宅、新宅两个篇章，像一部书分上下卷。老宅走在"王"字格局里，世代传承的气象扑面而来；新宅两个从"士"的哥俩，处处布置精美石刻，"代代连科"的期许被先人明明白白写成家训——一座院落，把一个家族想说的话，全说给了后来的人。</p>
+</div>
+<figure><span class="todo">📷 照片待补：大院鸟瞰 / "王"字格局航拍</span></figure>
+<div class="memo"><b>她的记忆：</b>D5上午王家大院2小时+，下午波浪谷。</div>
+<div class="insight"><b class="lbl">💭 她的感悟</b>积善之家必有余庆，积不善之家必有余殃。独木难支，家族的力量是古人相信的吧。——走进陌生之路遇到信任路人的那天，人和人之间，还是信任多一点的。</div>
+</div>
+
+<div class="dhead" id="d2"><span class="dbadge">D2</span><span class="ddate">M.DD</span><span class="dtitle">当日主题</span><div class="dline"></div></div><div class="dmeta">🚶 当日活动</div>
+<div class="tcard"><b>地点名</b><span class="era">背景标签</span>
+<p class="intro">一句话定位。</p>
+<div class="deep"><b class="lbl">📖 深度介绍</b><p>这一站的历史 / 文明 / 艺术叙事，可以写厚——这正是文化类和风景类的区别。</p></div>
+<div class="memo"><b>她的记忆：</b>当日流水一行。</div>
+<div class="insight"><b class="lbl">💭 她的感悟</b>这一站让你想到什么——人、家、时代、自己。留着，回来补。</div>
+</div>
+
+</div>
+<div class="footer">文化深度类模板 · Ten-year bank</div><a class="home-btn" href="../">回到我的旅行地图</a>
+</body></html>
