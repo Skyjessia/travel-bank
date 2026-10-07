@@ -7,6 +7,6 @@
   if (typeof TRIP_BANK === "undefined" || typeof PLACE_BANK === "undefined") {
     document.write('<script src="' + root + 'data/bank.js"><' + '/script>');
   }
-  FILES.forEach(function(f){ document.write('<script src="' + root + 'data/trips/' + f + '"><\/script>'); });
+  FILES.forEach(function(f){ document.write('<script src="' + root + 'trips/' + f + '"><\/script>'); });
 })();
 /* rev 2 */
