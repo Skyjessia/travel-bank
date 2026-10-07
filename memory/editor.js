@@ -10,7 +10,7 @@
     json: window.ME_JSON || ''
   };
   function tok(){ return localStorage.getItem('gh_up_token'); }
-  function stories(){ return Array.prototype.slice.call(document.querySelectorAll('.story')); }
+  function stories(){ return Array.prototype.slice.call(document.querySelectorAll(window.ME_SEL || '.story')); }
   function draftKey(i){ return 'me_draft_' + CFG.json + '_' + i; }
 
   /* ---- 1. 打开时：云端 → 页面（本地草稿优先，云端兜底） ---- */
