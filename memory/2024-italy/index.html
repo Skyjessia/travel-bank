@@ -75,7 +75,7 @@ function upSend(el){
         body: JSON.stringify({ message: '📷 ' + name, content: reader.result.split(',')[1], branch: UP.branch })
       }).then(function(r){ return r.json(); }).then(function(j){
         if(j.content){
-          el.innerHTML = '<img src="' + j.content.download_url + '?v=' + Date.now() + '" alt="' + name + '">';
+          el.innerHTML = '<img loading="lazy" decoding="async" src="' + j.content.download_url + '?v=' + Date.now() + '" alt="' + name + '">';
           el.style.border = 'none';
         } else { alert('上传失败：' + (j.message || '未知错误')); }
       });
