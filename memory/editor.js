@@ -5,6 +5,10 @@
    能力：story 即时本地存 · 💾一键固化到仓库 · 刷新自动加载
    ═══════════════════════════════════════════ */
 (function(){
+  var st = document.createElement('style');
+  st.textContent = '[contenteditable="true"]:hover{outline:1.5px dashed #c8a24a;outline-offset:3px;cursor:text;border-radius:4px}' +
+    '[contenteditable="true"]:focus{outline:2px solid #c8a24a;outline-offset:3px;background:#fffdf5;border-radius:6px}';
+  document.head.appendChild(st);
   var CFG = {
     owner: 'Skyjessia', repo: 'travel-bank', branch: 'main',
     json: window.ME_JSON || ''
@@ -39,6 +43,9 @@
   function bindLocal(){
     stories().forEach(function(el, i){
       el.style.whiteSpace = 'pre-wrap';
+      el.contentEditable = 'true';
+      el.spellcheck = false;
+      el.setAttribute('title', '点击编辑·写完点💾固化');
       var k = draftKey(i);
       var saved = localStorage.getItem(k);
       if(saved){ render(i, saved); }
