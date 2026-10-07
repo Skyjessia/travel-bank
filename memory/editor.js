@@ -43,6 +43,10 @@
   function bindLocal(){
     stories().forEach(function(el, i){
       el.style.whiteSpace = 'pre-wrap';
+      try { el.contentEditable = 'plaintext-only'; }
+      catch(e){ el.contentEditable = 'true'; }
+      if(el.contentEditable !== 'plaintext-only') el.contentEditable = 'true';
+      el.spellcheck = false;
       el.contentEditable = 'true';
       el.spellcheck = false;
       el.setAttribute('title', '点击编辑·写完点💾固化');
@@ -57,6 +61,15 @@
   }
 
   /* ---- 3. 保存条 UI ---- */
+  function editCss(){
+    if(document.getElementById('meCss')) return;
+    var s = document.createElement('style');
+    s.id = 'meCss';
+    s.textContent = '[contenteditable="true"],[contenteditable="plaintext-only"]{cursor:text;border-radius:4px;transition:outline .15s,background .15s}' +
+      '[contenteditable="true"]:hover,[contenteditable="plaintext-only"]:hover{outline:1.5px dashed rgba(200,162,74,.75);outline-offset:3px}' +
+      '[contenteditable="true"]:focus,[contenteditable="plaintext-only"]:focus{outline:2px solid #c8a24a;outline-offset:3px;background:rgba(255,252,238,.92)}';
+    document.head.appendChild(s);
+  }
   function bar(){
     if(document.getElementById('meBar')) return;
     var d = document.createElement('div');
@@ -119,6 +132,6 @@
   }
 
   window.ME = { save: save, askTok: askTok, load: loadCloud };
-  function boot(){ if(!stories().length) return; bindLocal(); loadCloud(); bar(); }
+  function boot(){ if(!stories().length) return; editCss(); bindLocal(); loadCloud(); bar(); }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
 })();
