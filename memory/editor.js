@@ -23,8 +23,22 @@
   function stories(){ return Array.prototype.slice.call(document.querySelectorAll(window.ME_SEL || '.story')); }
   function todos(){ return Array.prototype.slice.call(document.querySelectorAll('.todo')); }
   function draftKey(i){ return 'me_draft_' + CFG.json + '_' + i; }
-  function photoKey(){ return 'me_photos_' + CFG.json; }
+  function photoKey(){ return 'me_photos_v2_' + CFG.json; }
   function apiUrl(path){ return 'https://api.github.com/repos/' + CFG.owner + '/' + CFG.repo + '/contents/' + path; }
+  /* ---- 命名规范：photos/{行程id}/d{天}-{时分秒}-{批内序号}.jpg ---- */
+  function hhmmss(){
+    var d = new Date();
+    return ('0'+d.getHours()).slice(-2)+('0'+d.getMinutes()).slice(-2)+('0'+d.getSeconds()).slice(-2);
+  }
+  function dayLabel(el){
+    var day = el.closest ? el.closest('.day') : null;
+    var badge = day ? day.querySelector('.dbadge') : null;
+    if(badge){
+      var m = (badge.textContent || '').match(/D(\d+)/);
+      if(m) return 'd' + m[1];
+    }
+    return 'p' + (el.getAttribute('data-me-todo') || '0');
+  }
 
   /* ---- 1. 打开时：云端 → 页面（本地草稿优先，云端兜底） ---- */
   function render(i, text){
@@ -244,7 +258,7 @@
     list.reduce(function(p, file){
       return p.then(function(){
         return compress(file).then(function(b64img){
-          var name = 'd' + idx + '-' + Date.now() + '-' + done + '.jpg';
+          var name = dayLabel(todos()[idx]) + '-' + hhmmss() + '-' + ('0'+(done+1)).slice(-2) + '.jpg';
           return putFile(dir + '/' + name, b64img, '📷 照片 ' + name, null)
           .then(function(r){
             if(!r.ok) return r.text().then(function(){ throw new Error('上传失败 ' + r.status); });
