@@ -15,4 +15,9 @@ PLACE_BANK.push(
     { "tripId": "", "country": "中国", "region": "浙江", "city": "台州", "lat": 28.6569, "lng": 121.4208, "status": "visited", "sites": [], "note": "" },
     { "tripId": "", "country": "中国", "region": "浙江", "city": "绍兴", "lat": 30.0300, "lng": 120.5804, "status": "visited", "sites": [], "note": "" },
     { "tripId": "", "country": "中国", "region": "浙江", "city": "湖州", "lat": 30.8927, "lng": 120.0884, "status": "visited", "sites": [], "note": "裸心谷" }
+  ,  { "tripId": "", "country": "中国", "region": "江西", "city": "武功山", "lat": 27.9449, "lng": 114.1733, "status": "visited", "sites": [], "note": "" },
+    { "tripId": "", "country": "中国", "region": "江西", "city": "婺源", "lat": 29.2479, "lng": 117.8619, "status": "visited", "sites": [], "note": "" },
+    { "tripId": "", "country": "中国", "region": "浙江", "city": "普陀山", "lat": 29.9740, "lng": 122.3826, "status": "visited", "sites": [], "note": "" },
+    { "tripId": "", "country": "中国", "region": "江西", "city": "三清山", "lat": 28.8990, "lng": 118.0556, "status": "visited", "sites": [], "note": "" },
+    { "tripId": "", "country": "中国", "region": "海南", "city": "三亚", "lat": 18.2528, "lng": 109.5119, "status": "visited", "sites": [], "note": "" }
 );
