@@ -20,5 +20,5 @@ PLACE_BANK.push(
     { "tripId": "", "country": "中国", "region": "浙江", "city": "普陀山", "lat": 29.9740, "lng": 122.3826, "status": "visited", "sites": [], "note": "" },
     { "tripId": "", "country": "中国", "region": "江西", "city": "三清山", "lat": 28.8990, "lng": 118.0556, "status": "visited", "sites": [], "note": "" },
     { "tripId": "", "country": "中国", "region": "海南", "city": "三亚", "lat": 18.2528, "lng": 109.5119, "status": "visited", "sites": [], "note": "" },
-    { "tripId": "", "country": "中国", "region": "陕西", "city": "西安", "lat": 34.3416, "lng": 108.9398, "status": "visited", "sites": ["城墙", "回民街", "白马寺"], "note": "出差之旅 · 羊肉泡馍 · 咸阳机场进出 · 2021.9.25 新疆行经此换乘飞机去龟兹" }
+    { "tripId": "", "country": "中国", "region": "陕西", "city": "西安", "lat": 34.3416, "lng": 108.9398, "status": "visited", "sites": ["城墙", "回民街", "白马寺"], "note": "出差之旅 · 羊肉泡馍 · 咸阳机场进出 · 独库行(2024.8)经此中转去库车(龟兹)" }
 );
