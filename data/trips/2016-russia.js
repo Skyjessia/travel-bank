@@ -6,6 +6,6 @@ TRIP_BANK.push({
     "guidePage": "", "memoryPage": "", "places": []
 });
 PLACE_BANK.push(
-    { "tripId": "2016-russia", "country": "俄罗斯", "region": "莫斯科", "city": "莫斯科", "lat": 55.7558, "lng": 37.6173, "day": 1, "status": "visited", "sites": [], "note": "跟团游·细节待补" },
-    { "tripId": "2016-russia", "country": "俄罗斯", "region": "圣彼得堡", "city": "圣彼得堡", "lat": 59.9343, "lng": 30.3351, "day": 4, "status": "visited", "sites": [], "note": "跟团游·细节待补" }
+    { "tripId": "2016-russia", "country": "俄罗斯", "region": "莫斯科", "city": "莫斯科", "lat": 55.7558, "lng": 37.6173, "day": 1, "status": "visited", "sites": ["红场"], "note": "" },
+    { "tripId": "2016-russia", "country": "俄罗斯", "region": "圣彼得堡", "city": "圣彼得堡", "lat": 59.9343, "lng": 30.3351, "day": 4, "status": "visited", "sites": ["冬宫", "叶卡捷琳娜宫", "夏宫"], "note": "感受过波罗的海的风" }
 );
