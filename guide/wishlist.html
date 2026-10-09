@@ -32,7 +32,8 @@ transition:background .2s}
 
 .wish-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:20px}
 .wish-card{background:rgba(47,42,36,.55);border:1px solid rgba(200,162,74,.35);border-radius:14px;padding:18px 20px}
-.wish-card .dot{width:10px;height:10px;border-radius:50%;background:#c8a24a;display:inline-block;margin-right:8px;box-shadow:0 0 0 0 rgba(200,162,74,.7);animation:wishPulse 2.6s infinite}
+.wish-card .dot{width:10px;height:10px;border-radius:50%;background:#8a8276;display:inline-block;margin-right:8px;border:1px solid #6b6154;animation:wishSleep 6s ease-in-out infinite}
+@keyframes wishSleep{0%,100%{opacity:.45}50%{opacity:.9}}
 @keyframes wishPulse{0%{box-shadow:0 0 0 0 rgba(200,162,74,.65)}70%{box-shadow:0 0 0 12px rgba(200,162,74,0)}100%{box-shadow:0 0 0 0 rgba(200,162,74,0)}}
 .wish-card b{font-size:16px;color:#f0e6d2;letter-spacing:1px}
 .wish-card .cont{font-size:12px;color:#c8a24a;margin:4px 0 8px;letter-spacing:2px}
@@ -73,7 +74,7 @@ body{background:linear-gradient(180deg,#141210,#1f1b16 60%,#141210)}
     var isDone = w.status === "done";
     if(isDone) done++;
     g.innerHTML += '<div class="wish-card" style="' + (isDone ? 'border-color:#c8a24a;background:rgba(200,162,74,.12)' : '') + '">' +
-      '<span class="dot" style="' + (isDone ? 'background:#c8a24a;animation:none;box-shadow:0 0 8px rgba(200,162,74,.9)' : '') + '"></span>' +
+      '<span class="dot" style="' + (isDone ? 'background:#e8b54a;animation:none;border-color:#e8b54a;box-shadow:0 0 10px rgba(232,181,74,.95)' : '') + '"></span>' +
       '<b style="' + (isDone ? 'color:#c8a24a' : '') + '">' + w.name + '</b>' +
       '<div class="cont">' + (w.cont || '') + '</div>' +
       '<p>' + (w.note || '') + '</p>' +

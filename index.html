@@ -648,6 +648,7 @@ a {
 .legend-dot{display:inline-block;width:7px;height:7px;margin-right:5px;border-radius:50%;
   vertical-align:middle;background:#ffd36a;box-shadow:0 0 8px #ffd36a;}
 .legend-passed{background:#d8d4ca;box-shadow:none;}
+.legend-wish{background:#332e27;border:1px solid #6b6154;box-shadow:none;opacity:.85;}
 .map-loading{position:absolute;inset:0;z-index:600;display:flex;align-items:center;justify-content:center;
   background:radial-gradient(circle at center, rgba(31,72,89,.95), rgba(7,28,41,.98));
   color:rgba(255,255,255,.85);font-size:14px;transition:opacity .5s ease;}
@@ -763,6 +764,7 @@ a {
             <div class="map-legend">
                 <span><i class="legend-dot"></i>已去过</span>
                 <span><i class="legend-dot legend-passed"></i>路过</span>
+                <span><i class="legend-dot legend-wish"></i>想去 · 等待点亮</span>
             </div>
         </div>
 
@@ -1334,27 +1336,31 @@ window.filterCardsByYear = function(value){
   ].join("");
   document.head.appendChild(labelStyle);
 
-  /* ===== 想去清单 · 金色脉冲层（2026-10-06） ===== */
+  /* ===== 想去清单 · 暗色待点亮层（2026-10-09改版：熄灭的灯·去一个亮一个） ===== */
   var wishLayer = L.layerGroup();
   (typeof WISH_BANK !== "undefined" ? WISH_BANK : []).forEach(function(w){
+    var lit = w.status === "done";
     var m = L.marker([w.lat, w.lng], {
-      icon: L.divIcon({className:"wish-wrap", html:"<div class=\"wish-pulse\"><div class=\"wish-dot\"></div></div><div class=\"wish-label\">"+w.name+"</div>", iconSize:null}),
+      icon: L.divIcon({className:"wish-wrap", html:"<div class=\"wish-pulse"+(lit?" wish-lit":"")+"\"><div class=\"wish-dot\"></div></div><div class=\"wish-label"+(lit?" wish-label-lit":"")+"\">"+w.name+"</div>", iconSize:null}),
       interactive:true
     });
-    if(w.note) m.bindTooltip(w.name + " · " + w.note, {direction:"top", offset:[0,-10], className:"wish-tip"});
+    if(w.note) m.bindTooltip(w.name + " · " + w.note + (lit ? " · ✨ 已点亮" : ""), {direction:"top", offset:[0,-10], className:"wish-tip"});
     wishLayer.addLayer(m);
   });
   wishLayer.addTo(worldMap);
   var wishCss = document.createElement("style");
   wishCss.textContent = [
     ".wish-pulse{width:12px;height:12px;transform:translate(-50%,-50%)}",
-    ".wish-dot{width:9px;height:9px;border-radius:50%;background:#c8a24a;",
-    "  box-shadow:0 0 0 0 rgba(200,162,74,.75);animation:wishPulse 2.6s infinite}",
-    "@keyframes wishPulse{0%{box-shadow:0 0 0 0 rgba(200,162,74,.65)}",
-    "  70%{box-shadow:0 0 0 16px rgba(200,162,74,0)}100%{box-shadow:0 0 0 0 rgba(200,162,74,0)}}",
-    ".wish-label{font-size:11px;color:rgba(255,250,240,.5);white-space:nowrap;",
+    /* 未点亮：暗色沉睡点·6秒一次极缓呼吸 */
+    ".wish-dot{width:9px;height:9px;border-radius:50%;background:#332e27;border:1px solid #6b6154;",
+    "  animation:wishSleep 6s ease-in-out infinite}",
+    "@keyframes wishSleep{0%,100%{opacity:.5}50%{opacity:.95}}",
+    /* 已点亮：琥珀亮灯 */
+    ".wish-pulse.wish-lit .wish-dot{background:#e8b54a;border-color:#e8b54a;box-shadow:0 0 10px rgba(232,181,74,.95),0 0 24px rgba(232,181,74,.45);animation:none}",
+    ".wish-label{font-size:11px;color:rgba(255,250,240,.34);white-space:nowrap;",
     "  text-shadow:0 0 4px rgba(0,0,0,.95);transform:translate(-50%,8px);",
     "  pointer-events:none;font-family:-apple-system,'PingFang SC',sans-serif}",
+    ".wish-label.wish-label-lit{color:rgba(240,214,138,.95);font-weight:600}",
     ".wish-tip{background:#2f2a24;color:#e8dcc8;border:1px solid #c8a24a;"
   ].join("");
   document.head.appendChild(wishCss);
