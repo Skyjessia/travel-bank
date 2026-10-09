@@ -45,6 +45,7 @@
     var el = stories()[i]; if(!el || !text) return;
     el.textContent = text;
     el.style.whiteSpace = 'pre-wrap';
+    el.classList.remove('fillhint');
   }
   function loadCloud(){
     if(!CFG.json) return;
