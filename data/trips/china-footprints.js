@@ -19,5 +19,6 @@ PLACE_BANK.push(
     { "tripId": "", "country": "中国", "region": "江西", "city": "婺源", "lat": 29.2479, "lng": 117.8619, "status": "visited", "sites": [], "note": "" },
     { "tripId": "", "country": "中国", "region": "浙江", "city": "普陀山", "lat": 29.9740, "lng": 122.3826, "status": "visited", "sites": [], "note": "" },
     { "tripId": "", "country": "中国", "region": "江西", "city": "三清山", "lat": 28.8990, "lng": 118.0556, "status": "visited", "sites": [], "note": "" },
-    { "tripId": "", "country": "中国", "region": "海南", "city": "三亚", "lat": 18.2528, "lng": 109.5119, "status": "visited", "sites": [], "note": "" }
+    { "tripId": "", "country": "中国", "region": "海南", "city": "三亚", "lat": 18.2528, "lng": 109.5119, "status": "visited", "sites": [], "note": "" },
+    { "tripId": "", "country": "中国", "region": "陕西", "city": "西安", "lat": 34.3416, "lng": 108.9398, "status": "visited", "sites": ["城墙", "白马寺"], "note": "出差之旅" }
 );
