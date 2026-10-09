@@ -1351,13 +1351,13 @@ window.filterCardsByYear = function(value){
   var wishCss = document.createElement("style");
   wishCss.textContent = [
     ".wish-pulse{width:12px;height:12px;transform:translate(-50%,-50%)}",
-    /* 未点亮：暗色沉睡点·6秒一次极缓呼吸 */
-    ".wish-dot{width:9px;height:9px;border-radius:50%;background:#332e27;border:1px solid #6b6154;",
-    "  animation:wishSleep 6s ease-in-out infinite}",
-    "@keyframes wishSleep{0%,100%{opacity:.5}50%{opacity:.95}}",
+    /* 未点亮：空心虚线金圈·等待被填充（深色地图上清晰可见） */
+    ".wish-dot{width:10px;height:10px;border-radius:50%;background:rgba(200,162,74,.08);border:1.5px dashed rgba(200,162,74,.85);",
+    "  animation:wishSleep 5s ease-in-out infinite}",
+    "@keyframes wishSleep{0%,100%{opacity:.65}50%{opacity:1}}",
     /* 已点亮：琥珀亮灯 */
     ".wish-pulse.wish-lit .wish-dot{background:#e8b54a;border-color:#e8b54a;box-shadow:0 0 10px rgba(232,181,74,.95),0 0 24px rgba(232,181,74,.45);animation:none}",
-    ".wish-label{font-size:11px;color:rgba(255,250,240,.34);white-space:nowrap;",
+    ".wish-label{font-size:11px;color:rgba(255,250,240,.55);white-space:nowrap;",
     "  text-shadow:0 0 4px rgba(0,0,0,.95);transform:translate(-50%,8px);",
     "  pointer-events:none;font-family:-apple-system,'PingFang SC',sans-serif}",
     ".wish-label.wish-label-lit{color:rgba(240,214,138,.95);font-weight:600}",
