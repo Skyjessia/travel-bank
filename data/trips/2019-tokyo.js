@@ -1,7 +1,7 @@
 TRIP_BANK.push({
     "id": "2019-tokyo", "title": "东京圣诞跨年", "destination": "东京", "country": "日本",
     "year": 2019, "startDate": "2019-12-25", "endDate": "2019-12-31",
-    "cover": "images/covers/2019-tokyo.jpg", "type": "trip", "status": "completed", "memoryStatus": "partial",
+    "cover": "images/covers/2019-tokyo.jpg", "type": "trip", "status": "completed", "memoryStatus": "partial", "tier": "deep",
     "description": "新西兰回来两周又飞日本——上野·浅草·三鹰之森吉卜力·银座·目黑川·六本木，跨年在东京。",
     "guidePage": "guide/2019-tokyo.html", "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2019-tokyo/", "places": ["东京都"]
 });

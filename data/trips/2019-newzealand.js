@@ -9,7 +9,7 @@ TRIP_BANK.push({
     "cover": "images/covers/2019-newzealand.jpg",
     "type": "trip",
     "status": "completed",
-    "memoryStatus": "partial",
+    "memoryStatus": "partial", "tier": "deep",
     "description": "16天南北岛大环线：天空塔·怀托摩萤火虫洞·霍比屯·汤加里罗火山徒步·蒂卡波观星·胡克冰川·皇后镇——稻稻家的Giver带队。",
     "guidePage": "guide/2019-newzealand.html",
     "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2019-newzealand/",

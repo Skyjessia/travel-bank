@@ -1,7 +1,7 @@
 TRIP_BANK.push({
     "id": "2015-uk", "title": "杰西亚的英伦11天", "destination": "伦敦 · 爱丁堡 · 剑桥 · 巴斯", "country": "英国",
     "year": 2015, "startDate": "2015-07-02", "endDate": "2015-07-14",
-    "cover": "", "type": "trip", "status": "completed", "memoryStatus": "none",
+    "cover": "", "type": "trip", "status": "completed", "memoryStatus": "none", "tier": "deep",
     "description": "十年档案的真正起点：9¾站台出发——爱丁堡城堡·剑桥徐志摩诗碑·查令十字街84号·温莎·巴斯罗马浴场·诺丁山。",
     "guidePage": "guide/2015-uk.html", "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2015-uk/", "places": ["英格兰", "苏格兰"]
 });

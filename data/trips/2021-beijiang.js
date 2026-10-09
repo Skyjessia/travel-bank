@@ -11,7 +11,7 @@ TRIP_BANK.push({
     "cover": "images/covers/2021-beijiang.jpg",
     "type": "trip",
     "status": "completed",
-    "memoryStatus": "none",
+    "memoryStatus": "none", "tier": "deep",
     "description": "稻草人8日北疆环线：伊宁集合，赛里木湖停留半日，乌尔禾魔鬼城雅丹，禾木晨雾与观景台，喀纳斯观鱼台1068级台阶与图瓦人家访，五彩滩黄昏，阿勒泰散队。",
     "guidePage": "guide/2021-beijiang.html",
     "memoryPage": ""

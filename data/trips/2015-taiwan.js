@@ -1,7 +1,7 @@
 TRIP_BANK.push({
     "id": "2015-taiwan", "title": "yun酱的温泉旅行", "destination": "台北 · 九份 · 北投", "country": "中国",
     "year": 2015, "startDate": "2015-12-28", "endDate": "2016-01-03",
-    "cover": "", "type": "trip", "status": "completed", "memoryStatus": "none",
+    "cover": "", "type": "trip", "status": "completed", "memoryStatus": "none", "tier": "deep",
     "description": "十年档案里最早的一次出发——跨年温泉之旅：九份山城·阳明山·北投地热谷·西门町·诚品书店。",
     "guidePage": "guide/2015-taiwan.html", "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2015-taiwan/", "places": ["台湾"]
 });

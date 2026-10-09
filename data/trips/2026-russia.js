@@ -12,7 +12,7 @@ TRIP_BANK.push(
     "cover": "images/covers/2026-russia.jpg",
     "type": "trip",
     "status": "completed",
-    "memoryStatus": "partial",
+    "memoryStatus": "partial", "tier": "deep",
     "description": "10天贝加尔湖+北极圈（2.11晨抵沪）：上海经北京到伊尔库茨克，奥利洪岛小木屋3晚追蓝冰冰洞，伊尔库茨克三大教堂city walk，两段飞抵摩尔曼斯克4晚——阿廖沙纪念碑看不冻港、列宁号破冰船、最北麦当劳，极光第一次扑空第二次跟团终于收获，捷里别尔卡看到北冰洋。",
     "guidePage": "guide/2026-russia.html",
     "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2026-russia/"

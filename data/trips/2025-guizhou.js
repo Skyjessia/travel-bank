@@ -11,7 +11,7 @@ TRIP_BANK.push({
     "cover": "images/covers/2025-guizhou.jpg",
     "type": "trip",
     "status": "completed",
-    "memoryStatus": "partial",
+    "memoryStatus": "partial", "tier": "deep",
     "description": "六天避暑线：上海火车入黔，格凸河开胃，乌蒙大草原与荷城，北盘江大桥与普立大桥跨黔滇界看尼珠河大峡谷，阿西里西韭菜坪云上花海（8月野生韭菜花正盛），野玉海与明湖公园（中国凉都19度），龙宫暗河与夜郎谷收尾。",
     "guidePage": "guide/2025-guizhou.html",
     "memoryPage": ""

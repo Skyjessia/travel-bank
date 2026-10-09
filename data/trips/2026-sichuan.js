@@ -14,7 +14,7 @@ TRIP_BANK.push({
     "cover": "images/covers/2026-sichuan.jpg",
     "type": "trip",
     "status": "completed",
-    "memoryStatus": "partial",
+    "memoryStatus": "partial", "tier": "deep",
     "description": "入川·观水·瑶池·古蜀·市井·归途——九寨沟黄龙+三星堆+青城山都江堰，两人人均5023元。",
     "guidePage": "https://skyjessia.github.io/sichuan6day/",
     "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2026-sichuan/"

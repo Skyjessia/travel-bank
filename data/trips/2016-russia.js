@@ -1,8 +1,8 @@
 TRIP_BANK.push({
     "id": "2016-russia", "title": "俄罗斯 · 莫斯科圣彼得堡", "destination": "莫斯科 · 圣彼得堡", "country": "俄罗斯",
     "year": 2016, "startDate": "2016-05-23", "endDate": "2016-05-30",
-    "cover": "", "type": "trip", "status": "completed", "memoryStatus": "none",
-    "description": "七日跟团游（细节后补）。",
+    "cover": "", "type": "trip", "status": "completed", "memoryStatus": "none", "tier": "light",
+    "description": "七日跟团：莫斯科红场，圣彼得堡冬宫·叶卡捷琳娜宫·夏宫，波罗的海的风。",
     "guidePage": "", "memoryPage": "", "places": []
 });
 PLACE_BANK.push(

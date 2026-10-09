@@ -1,8 +1,8 @@
 TRIP_BANK.push({
     "id": "2017-chongqing", "title": "重庆", "destination": "重庆", "country": "中国",
     "year": 2017, "startDate": "2017-07", "endDate": "2017-07",
-    "cover": "", "type": "trip", "status": "completed", "memoryStatus": "none",
-    "description": "2017年7月底（细节后补）。",
+    "cover": "", "type": "trip", "status": "completed", "memoryStatus": "none", "tier": "light",
+    "description": "2017年7月底。",
     "guidePage": "", "memoryPage": "", "places": []
 });
 PLACE_BANK.push(

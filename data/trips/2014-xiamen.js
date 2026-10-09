@@ -1,8 +1,8 @@
 TRIP_BANK.push({
     "id": "2014-xiamen", "title": "厦门 · 鼓浪屿", "destination": "鼓浪屿 · 曾厝垵", "country": "中国",
     "year": 2014, "startDate": "2014-03-08", "endDate": "2014-03-12",
-    "cover": "", "type": "trip", "status": "completed", "memoryStatus": "none",
-    "description": "鼓浪屿与曾厝垵（细节后补）。",
+    "cover": "", "type": "trip", "status": "completed", "memoryStatus": "none", "tier": "light",
+    "description": "鼓浪屿与曾厝垵五日。",
     "guidePage": "", "memoryPage": "", "places": []
 });
 PLACE_BANK.push(

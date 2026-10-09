@@ -11,7 +11,7 @@ TRIP_BANK.push({
     "cover": "images/covers/2021-shangrila.jpg",
     "type": "trip",
     "status": "completed",
-    "memoryStatus": "none",
+    "memoryStatus": "none", "tier": "deep",
     "description": "松赞系酒店环线8日：松赞林寺·唐卡·藏族家访起笔，塔城哈达村手磨豆腐，奔子栏手作木碗，飞来寺守卡瓦格博，白马雪山徒步，尼丁原始森林野餐收束。",
     "guidePage": "guide/2021-shangrila.html",
     "memoryPage": ""

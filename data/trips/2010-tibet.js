@@ -1,7 +1,7 @@
 TRIP_BANK.push({
     "id": "2010-tibet", "title": "西藏 · 拉萨圣湖", "destination": "拉萨 · 羊卓雍措 · 玛旁雍措 · 冈仁波齐", "country": "中国",
     "year": 2010, "startDate": "2010-05", "endDate": "2010-05",
-    "cover": "", "type": "trip", "status": "completed", "memoryStatus": "none",
+    "cover": "", "type": "trip", "status": "completed", "memoryStatus": "none", "tier": "deep",
     "description": "七天。上海到西宁火车进拉萨——布达拉宫、羊卓雍措、玛旁雍措，到了冈仁波齐山脉附近。",
     "guidePage": "guide/2010-tibet.html", "memoryPage": "", "places": []
 });

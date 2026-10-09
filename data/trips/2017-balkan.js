@@ -3,7 +3,7 @@
 TRIP_BANK.push({
     "id": "2017-balkan", "title": "巴尔干与亚得里亚海", "destination": "阿姆斯特丹 · 十六湖 · 扎达尔 · 希贝尼克 · 特罗吉尔 · 斯普利特 · 哈瓦尔 · 杜布罗夫尼克 · 科托尔",
     "country": "克罗地亚", "year": 2017, "startDate": "2017-09-23", "endDate": "2017-10-05",
-    "cover": "images/covers/2017-balkan.jpg", "type": "trip", "status": "completed", "memoryStatus": "partial",
+    "cover": "images/covers/2017-balkan.jpg", "type": "trip", "status": "completed", "memoryStatus": "partial", "tier": "deep",
     "description": "13天六人团（Jess·方冰·楼·Cyn一家）：上海经阿姆斯特丹中转（凡高博物馆）进萨格勒布，租车自驾南下十六湖→扎达尔→希贝尼克→特罗吉尔→斯普利特，船跳哈瓦尔岛，杜布罗夫尼克权游徒步tour，黑山科托尔一日游，夜飞萨格勒布经巴黎回沪。",
     "guidePage": "guide/2017-balkan.html", "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2017-balkan/"
 });

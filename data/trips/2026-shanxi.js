@@ -16,7 +16,7 @@ TRIP_BANK.push(
     "cover": "images/covers/2026-shanxi.jpg",
     "type": "trip",
     "status": "completed",
-    "memoryStatus": "partial",
+    "memoryStatus": "partial", "tier": "deep",
     "description": "一次关于山西与陕西的八日旅行。",
     "guidePage": "https://skyjessia.github.io/Shanxitravelplan/",
     "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2026-shanxi/",

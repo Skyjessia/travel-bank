@@ -11,7 +11,7 @@ TRIP_BANK.push({
     "cover": "images/covers/2025-egypt.jpg",
     "type": "trip",
     "status": "completed",
-    "memoryStatus": "partial",
+    "memoryStatus": "partial", "tier": "deep",
     "description": "三大一小手排14天（1-20~2-2）：上海经迪拜到开罗4日（金字塔前民宿·国家博物馆请向导·尼罗河游船夜与埃及伙伴共舞·吉萨·哈利利市集）→D4夜宿火车南下→阿布辛贝双神庙→阿斯旺3日（三角帆船·努比亚村落·菲莱神庙·尼罗河惨案酒店看日落·市场买香水）→卢克索5日（丹德拉·帝王谷·哈布城·卡纳克）→2-2卢克索飞开罗+新开罗区city walk·晚机回沪。",
     "guidePage": "guide/2025-egypt.html",
     "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2025-egypt/"

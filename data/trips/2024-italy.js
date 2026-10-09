@@ -9,7 +9,7 @@ TRIP_BANK.push({
     "cover": "images/covers/2024-italy.jpg",
     "type": "trip",
     "status": "completed",
-    "memoryStatus": "partial",
+    "memoryStatus": "partial", "tier": "deep",
     "description": "16天文艺复兴主线：梵蒂冈·乌菲兹·圣母百花·威尼斯水城·圣西罗，CA967出发。",
     "guidePage": "guide/2024-italy.html",
     "memoryPage": "https://skyjessia.github.io/travel-bank/memory/2024-italy/",
